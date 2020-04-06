@@ -2981,6 +2981,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/Views/Shared/_Header.cshtml",
+      "TargetPath": "Views\\Shared\\_Header.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/Views/Shared/_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "FileKind": "mvc"
