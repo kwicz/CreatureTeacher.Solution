@@ -38,11 +38,6 @@ namespace CreatureTeacher.Controllers
     {
       return View();
     }
-    public ActionResult Edit(int id)
-    {
-      var thisStudent = _db.Students.FirstOrDefault(students => students.StudentId == id);
-      ViewBag.CourseId = new SelectList(_db.Courses, "CourseId", "CourseName");
-      return View(thisStudent);
       
     [HttpPost]
     public ActionResult CreateChild(int parent1Id, int parent2Id)
@@ -62,23 +57,7 @@ namespace CreatureTeacher.Controllers
 
       // Run scramble methods on parent objects, have new object IDs returned
 
-      
-      
-      // so on and so forth
-
-      // new babyCreature = new Creature (eyeId, )
-
-      // int newEyeId = Creature.ScrambledEyes(parent1.EyeId, parent2.EyeId);
-      // newEye = fetch Eye from database with EyeId
-      // newCreature.Eye = newEye;
-      // newCreature.EyeId = newEyeId;
-
-
-      // int newMouthID = MixedUpMouths(parent1.Mouth, parent2.Mouth);
-      // new Mouth = fetch Mouth from database with Mouth Id
-
-      // Head newHead = WedHeads(parent1.Head, parent2.Head);
-      // Tail newTail = TailTwister(parent1.Tail, parent2.Tail);
+ 
       return View();      
     }
 
