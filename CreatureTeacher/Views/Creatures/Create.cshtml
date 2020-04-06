@@ -1,0 +1,22 @@
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+@model CreatureTeacher.Models.Creature
+
+@using (Html.BeginForm())
+{
+	@Html.LabelFor(model => model.Name, new { @class="mdl-textfield__label" })
+	@Html.TextBoxFor(model => model.Name, new { @class="mdl-textfield__input", @required="true"  })
+	@Html.LabelFor(model => model.Eye)
+	@Html.TextBoxFor(model => model.Eye)
+	@Html.LabelFor(model => model.Mouth)
+	@Html.TextBoxFor(model => model.Mouth)
+	@Html.LabelFor(model => model.Head)
+	@Html.TextBoxFor(model => model.Head)
+	@Html.LabelFor(model => model.Tail)
+	@Html.TextBoxFor(model => model.Tail)
+	<button type="submit">Make Me a Friend!</button>
+}
+
+@Html.ActionLink("Go back to all creatures", "Index")
