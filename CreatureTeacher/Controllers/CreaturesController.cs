@@ -37,9 +37,7 @@ namespace CreatureTeacher.Controllers
     public ActionResult Details(int id)
     {
       Creature thisCreature = _db.Creatures.FirstOrDefault(creature => creature.CreatureId == id);
-      // thisCreature.Eye = _db.Creatures.Where(eyes => eyes.EyeId == id).ToList();
-      // thisCreature.Head = _db.Creatures.Where(eyes => creature.EyeId == id).ToList();
-      return View(thisCreature);
+       return View(thisCreature);
     }
 
     public ActionResult Delete(int id)
