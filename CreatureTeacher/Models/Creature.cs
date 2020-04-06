@@ -9,7 +9,7 @@ namespace CreatureTeacher.Models
     public int CreatureId {get;set;}
     public string Name {get;set;}
 
-    public Date BirthDate {get;set}
+    public DateTime BirthDate {get;set;}
 
     public int EyeId {get;set;}
     public virtual Eye Eye {get; set;}

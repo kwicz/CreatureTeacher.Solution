@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using CreatureTeachewr.Models;
+using CreatureTeacher.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +18,7 @@ namespace CreatureTeacher.Controllers
 
     public ActionResult Index()
     {
-      List<Head> model = _db.Heads.Include(heads => heads.Head).ToList();
+      List<Head> model = _db.Heads.Include(heads => heads.Creatures).ToList();
       return View(model);
     }
 

@@ -1,0 +1,20 @@
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+@using CreatureTeacher.Models
+@using System.Collections.Generic
+@model List<CreatureTeacher.Models.Creature>
+
+if (@Model.Count == 0)
+{
+  <p>You have no creatures.  Would you like to create one?</p>
+  @Html.ActionLink("Add New Creature", "Create")
+}
+
+@foreach(Creature creature in Model)
+{
+  @Html.ActionLink($"{creature.Name}", "Details", new { id = creature.CreatureId })
+}
+
+<p>Add some buttons here!</p>

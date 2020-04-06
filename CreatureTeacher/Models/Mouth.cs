@@ -2,13 +2,14 @@ using System.Collections.Generic;
 
 namespace CreatureTeacher.Models
 {
-  public class Head 
+  public class Mouth 
   {
-    public int HeadId { get; set; }
+    public int MouthId { get; set; }
+    public string Name { get; set; }
     public string Codon { get; set; }
     public string Image { get; set; }
     public virtual ICollection<Creature> Creatures { get; set; }
-    public Head()
+    public Mouth()
     {
       this.Creatures = new HashSet<Creature>();
     }

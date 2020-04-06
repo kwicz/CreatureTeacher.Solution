@@ -28,3 +28,7 @@
 /Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/CreatureTeacher.dll
 /Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/CreatureTeacher.pdb
 /Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/CreatureTeacher.csproj.CopyComplete
+/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/Create.g.cshtml.cs
+/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/Delete.g.cshtml.cs
+/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/Details.g.cshtml.cs
+/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/Index.g.cshtml.cs

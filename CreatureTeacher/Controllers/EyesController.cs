@@ -18,7 +18,7 @@ namespace CreatureTeacher.Controllers
 
     public ActionResult Index()
     {
-      List<Eye> model = _db.Eyes.Include(eyes => eyes.Eye).ToList();
+      List<Eye> model = _db.Eyes.Include(eyes => eyes.Creatures).ToList();
       return View(model);
     }
 
