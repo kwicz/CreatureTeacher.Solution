@@ -2976,8 +2976,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/Views/Creatures/Index.cshtml",
+      "TargetPath": "Views\\Creatures\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/Views/Shared/_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/Views/Home/StephsTestView.cshtml",
+      "TargetPath": "Views\\Home\\StephsTestView.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2991,8 +3001,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/Views/Creatures/Delete.cshtml",
+      "TargetPath": "Views\\Creatures\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/Views/Creatures/Details.cshtml",
+      "TargetPath": "Views\\Creatures\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/Views/Creatures/Create.cshtml",
+      "TargetPath": "Views\\Creatures\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
