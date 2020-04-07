@@ -10,19 +10,17 @@ namespace CreatureTeacher.Models
     public int Parent1Id {get;set;}
     public int Parent2Id {get;set;}
     public string Name {get;set;}
-
     public DateTime BirthDate {get;set;}
-
     public int EyeId {get;set;}
     public Eye Eye {get; set;}
+    public int MouthId {get;set;}
+    public Mouth Mouth {get; set;}    
     public int HeadId {get;set;}
     public Head Head {get; set;}
-    public int MouthId {get;set;}
-    public Mouth Mouth {get; set;}
     public int TailId {get;set;}
     public Tail Tail {get; set;}
 
-    public Creature(Eye eye, Head head, Mouth mouth, Tail tail, int parent1Id, int parent2Id)
+    public Creature (int parent1Id, int parent2Id, Eye eye, Mouth mouth,  Head head, Tail tail)
     {
       this.Name = "New Creature";
       this.BirthDate = DateTime.Now;
@@ -38,54 +36,30 @@ namespace CreatureTeacher.Models
       this.Parent2Id = parent2Id;
     }
     
-    public static string CodonScrambler(string codon1, string codon2)
+    public static string CodonScrambler(string codon1, bool dominance1, string codon2, bool dominance2)
     {
-      return null;
+      if (dominance1 == dominance2)
+      {
+        Random random = new Random();
+        int result = random.Next(1, 2);
+        if (result == 1)
+        {
+          return codon1;
+        }
+        else
+        {
+          return codon2;
+        }
+      }
+      else if (dominance1 == true)
+      {
+        return codon1;
+      }
+      else
+      {
+        return codon2;
+      }
     }
-    // public static Eye ScrambledEyes(Eye eye1, Eye eye2)  
-    // {
-    //   return null;
-    // }
-
-    // public static Mouth MixedUpMouths(Mouth mouth1, Mouth mouth2)
-    // {
-    //   return null;
-    // }
-
-    // public static Head WedHeads(Head head1, Head head2)
-    // {
-    //   return null;
-    // }
-    
-    // public static Tail TailTwister(Tail tail1, Tail tail2)
-    // {
-    //   return null;
-    // }
-    
   }
 }
-
-
-
-// TAT
-// TAC 
-
-// if(Parent1Eye.Dominance == true && Parent2Eye.Dominance == true )
-// {
-//   return Parent1Eye.Codon;
-// }
-// else if (Parent1Eye.Dominance == true && Parent2Eye.Dominance == false)
-// { 
-//   return Parent1Eye.Codon;
-// }
-// else if (Parent1Eye.Dominance == false && Parent2Eye.Dominance == true)
-// {
-//   return Parent2Eye.Codon; 
-// }
-// else if (Parent1Eye.Dominance == false && Parent2Eye.Dominance == false)
-// {
-//   return Parent2Eye.Codon;
-// }
-
-
 
