@@ -42,23 +42,26 @@ namespace CreatureTeacher.Controllers
     [HttpPost]
     public ActionResult CreateChild(int parent1Id, int parent2Id)
     {
+      // Get parent objects
       Creature parent1 = _db.Creatures.Where(creature => creature.CreatureId == parent1Id).FirstOrDefault();
       Creature parent2 = _db.Creatures.Where(creature => creature.CreatureId == parent2Id).FirstOrDefault();
 
-      string EyeCodon = Creature.CodonScrambler(parent1.Eye.Codon, parent2.Eye.Codon);
-      string MouthCodon = Creature.CodonScrambler(parent1.Mouth.Codon, parent2.Mouth.Codon);
-      string HeadCodon = Creature.CodonScrambler(parent1.Head.Codon, parent2.Head.Codon);
-      string TailCodon = Creature.CodonScrambler(parent1.Tail.Codon, parent2.Tail.Codon);
-      // Eye newEye = Creature.ScrambledEyes(parent1.Eye, parent2.Eye);
-      // Mouth newMouth = Creature.MixedUpMouths(parent1.Mouth, parent2.Mouth);
-      // Head newHead = Creature.WedHeads(parent1.Head, parent2.Head);
-      // Tail newTail = Creature.TailTwister(parent1.Tail, parent2.Tail);
-      // Creature newCreature = new Creature();
+      // Create new codons for a new creature
+      string eyeCodon = Creature.CodonScrambler(parent1.Eye.Codon, parent1.Eye.Dominance, parent2.Eye.Codon, parent2.Eye.Dominance);
+      string mouthCodon = Creature.CodonScrambler(parent1.Mouth.Codon, parent1.Mouth.Dominance, parent2.Mouth.Codon, parent2.Mouth.Dominance);
+      string headCodon = Creature.CodonScrambler(parent1.Head.Codon, parent1.Head.Dominance, parent2.Head.Codon, parent2.Head.Dominance);
+      string tailCodon = Creature.CodonScrambler(parent1.Tail.Codon, parent1.Tail.Dominance, parent2.Tail.Codon, parent2.Tail.Dominance);
 
-      // Run scramble methods on parent objects, have new object IDs returned
-
+      // Get new feature objects based on codons
+      Eye newEye = _db.Eyes.Where(eyes => eyes.Codon == eyeCodon).FirstOrDefault();
+      Mouth newMouth = _db.Mouths.FirstOrDefault(mouths => mouths.Codon == mouthCodon);
+      Head newHead = _db.Heads.FirstOrDefault(heads => heads.Codon == headCodon);
+      Tail newTail = _db.Tails.FirstOrDefault(tails => tails.Codon == tailCodon);
+      
+      //Create Child with Creature Constructor
+      Creature newCreature = new Creature(parent1Id, parent2Id, newEye, newMouth, newHead, newTail);
  
-      return View();      
+      return View(newCreature);
     }
 
     public ActionResult Details(int id)

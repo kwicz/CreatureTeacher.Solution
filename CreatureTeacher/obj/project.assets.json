@@ -12156,11 +12156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/CreatureTeacher.csproj",
+      "projectUniqueName": "/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/CreatureTeacher.csproj",
       "projectName": "CreatureTeacher",
-      "projectPath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/CreatureTeacher.csproj",
+      "projectPath": "/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/CreatureTeacher.csproj",
       "packagesPath": "/Users/katysolovewicz/.nuget/packages/",
-      "outputPath": "/Users/katysolovewicz/Projects/epicodus/c#/CreatureTeacher.Solution/CreatureTeacher/obj/",
+      "outputPath": "/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

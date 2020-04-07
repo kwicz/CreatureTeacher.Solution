@@ -1,0 +1,17 @@
+Id,Name,Codon,Image,Dominance
+1,BoyToyBlack,CTT,,TRUE
+2,BoyToyYellow,CTC,,FALSE
+3,BoyToyGreen,CTA,,TRUE
+4,BoyToyRed,CTG,,FALSE
+5,GlamBlack,CCT,,TRUE
+6,GlamYellow,CCC,,FALSE
+7,GlamGreen,CCA,,TRUE
+8,GlamRed,CCG,,FALSE
+9,PigtailsBlack,CAT,,TRUE
+10,PigtailsYellow,CAC,,FALSE
+11,PigtailsGreen,CAA,,TRUE
+12,PigtailsRed,CAG,,FALSE
+13,MohawkBlack,CGT,,TRUE
+14,MohawkYellow,CGC,,FALSE
+15,MohawkGreed,CGA,,TRUE
+16,MohawkRed,CGG,,FALSE

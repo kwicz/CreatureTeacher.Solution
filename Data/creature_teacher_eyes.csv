@@ -1,0 +1,17 @@
+Id,Name,Codon,Image,Dominance
+1,FancyBlack,TTT,,TRUE
+2,FancyRed,TTC,,FALSE
+3,FancyGreen,TTA,,TRUE
+4,FancyPurple,TTG,,FALSE
+5,ChillBlack,TCT,,TRUE
+6,ChillRed,TCC,,FALSE
+7,ChillGreen,TCA,,TRUE
+8,ChillPurple,TCG,,FALSE
+9,DizzyBlack,TAT,,TRUE
+10,DizzyRed,TAC,,FALSE
+11,DizzyGreen,TAA,,TRUE
+12,DizzyPurple,TAG,,FALSE
+13,SadBlack,TGT,,TRUE
+14,SadRed,TGC,,FALSE
+15,SadGreen,TGA,,TRUE
+16,SadPurple,TGG,,FALSE
