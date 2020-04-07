@@ -36,7 +36,7 @@ namespace CreatureTeacher.Models
       this.Parent2Id = parent2Id;
     }
     
-    public static string CodonScrambler(string codon1, bool dominance1, string codon2, bool dominance2)
+    public static string CodonScrambler(string codon1, string dominance1, string codon2, string dominance2)
     {
       if (dominance1 == dominance2)
       {
@@ -51,7 +51,7 @@ namespace CreatureTeacher.Models
           return codon2;
         }
       }
-      else if (dominance1 == true)
+      else if (dominance1 == "TRUE")
       {
         return codon1;
       }
