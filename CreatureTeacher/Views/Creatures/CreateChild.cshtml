@@ -1,0 +1,38 @@
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+@* @using CreatureTeacher.Models
+@using System.Collections.Generic
+@model List<CreatureTeacher.Models.Creature> *@
+
+@model CreatureTeacher.Models.Creature
+
+@* @if (@Model.Count == 0)
+{
+  <p>You have no creatures.  Would you like to create one?</p>
+  @Html.ActionLink("Add New Creature", "Create")
+} *@
+@using (Html.BeginForm())
+{
+
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      Pick A Parent!
+      @* Parent Thumbnail Pics *@
+      @Html.LabelFor(model => model.Name)
+			@Html.DropDownList("CreatureId")
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      Pick A Parent!
+      @* Parent Thumbnail Pics *@
+      @Html.LabelFor(model => model.Name)
+			@Html.DropDownList("CreatureId")
+    </div>
+  </div>
+
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    Breed those Bad Mamma Jammas
+  </button>
+
+}

@@ -20,23 +20,28 @@ namespace CreatureTeacher.Models
     public int TailId {get;set;}
     public Tail Tail {get; set;}
 
-    public Creature (int parent1Id, int parent2Id, Eye eye, Mouth mouth,  Head head, Tail tail)
+    public Creature()
     {
-      this.Name = "New Creature";
-      this.BirthDate = DateTime.Now;
-      this.Eye = eye;
-      this.EyeId = eye.EyeId;
-      this.Head = head;
-      this.HeadId = head.HeadId;
-      this.Mouth = mouth;
-      this.MouthId = mouth.MouthId;
-      this.Tail = tail;
-      this.TailId = tail.TailId;
-      this.Parent1Id = parent1Id;
-      this.Parent2Id = parent2Id;
+
     }
+
+    // public Creature (int parent1Id, int parent2Id, Eye eye, Mouth mouth,  Head head, Tail tail)
+    // {
+    //   this.Name = "New Creature";
+    //   this.BirthDate = DateTime.Now;
+    //   this.Eye = eye;
+    //   this.EyeId = eye.EyeId;
+    //   this.Head = head;
+    //   this.HeadId = head.HeadId;
+    //   this.Mouth = mouth;
+    //   this.MouthId = mouth.MouthId;
+    //   this.Tail = tail;
+    //   this.TailId = tail.TailId;
+    //   this.Parent1Id = parent1Id;
+    //   this.Parent2Id = parent2Id;
+    // }
     
-    public static string CodonScrambler(string codon1, string dominance1, string codon2, string dominance2)
+    public static int CodonScrambler(int id1, string dominance1, int id2, string dominance2)
     {
       if (dominance1 == dominance2)
       {
@@ -44,20 +49,20 @@ namespace CreatureTeacher.Models
         int result = random.Next(1, 2);
         if (result == 1)
         {
-          return codon1;
+          return id1;
         }
         else
         {
-          return codon2;
+          return id2;
         }
       }
       else if (dominance1 == "TRUE")
       {
-        return codon1;
+        return id1;
       }
       else
       {
-        return codon2;
+        return id2;
       }
     }
   }

@@ -17,7 +17,7 @@ namespace CreatureTeacher.Migrations
                     Name = table.Column<string>(nullable: true),
                     Codon = table.Column<string>(nullable: true),
                     Image = table.Column<string>(nullable: true),
-                    Dominance = table.Column<bool>(nullable: false)
+                    Dominance = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -33,7 +33,7 @@ namespace CreatureTeacher.Migrations
                     Name = table.Column<string>(nullable: true),
                     Codon = table.Column<string>(nullable: true),
                     Image = table.Column<string>(nullable: true),
-                    Dominance = table.Column<bool>(nullable: false)
+                    Dominance = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -49,7 +49,7 @@ namespace CreatureTeacher.Migrations
                     Name = table.Column<string>(nullable: true),
                     Codon = table.Column<string>(nullable: true),
                     Image = table.Column<string>(nullable: true),
-                    Dominance = table.Column<bool>(nullable: false)
+                    Dominance = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -65,7 +65,7 @@ namespace CreatureTeacher.Migrations
                     Name = table.Column<string>(nullable: true),
                     Codon = table.Column<string>(nullable: true),
                     Image = table.Column<string>(nullable: true),
-                    Dominance = table.Column<bool>(nullable: false)
+                    Dominance = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -83,8 +83,8 @@ namespace CreatureTeacher.Migrations
                     Name = table.Column<string>(nullable: true),
                     BirthDate = table.Column<DateTime>(nullable: false),
                     EyeId = table.Column<int>(nullable: false),
-                    HeadId = table.Column<int>(nullable: false),
                     MouthId = table.Column<int>(nullable: false),
+                    HeadId = table.Column<int>(nullable: false),
                     TailId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

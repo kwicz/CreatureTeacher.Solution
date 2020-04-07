@@ -4,19 +4,27 @@
 
 @model CreatureTeacher.Models.Creature
 
-@using (Html.BeginForm())
-{
-	@Html.LabelFor(model => model.Name, new { @class="mdl-textfield__label" })
-	@Html.TextBoxFor(model => model.Name, new { @class="mdl-textfield__input", @required="true"  })
-	@Html.LabelFor(model => model.Eye)
-	@Html.TextBoxFor(model => model.Eye)
-	@Html.LabelFor(model => model.Mouth)
-	@Html.TextBoxFor(model => model.Mouth)
-	@Html.LabelFor(model => model.Head)
-	@Html.TextBoxFor(model => model.Head)
-	@Html.LabelFor(model => model.Tail)
-	@Html.TextBoxFor(model => model.Tail)
-	<button type="submit">Make Me a Friend!</button>
-}
+<div class="mdl-grid">
+  <div id="creature" class="mdl-cell mdl-cell--6-col">
+		@Html.Partial("_ShowCreature")
+	</div>
+  <div class="mdl-cell mdl-cell--6-col">
+		@using (Html.BeginForm())
+		{
+			@Html.LabelFor(model => model.Name)
+			@Html.EditorFor(model => model.Name)
+			@Html.LabelFor(model => model.Eye)
+			@Html.DropDownList("EyeId")
+			@Html.LabelFor(model => model.Mouth)
+			@Html.DropDownList("MouthId")
+			@Html.LabelFor(model => model.Head)
+			@Html.DropDownList("HeadId")
+			@Html.LabelFor(model => model.Tail)
+			@Html.DropDownList("TailId")
+			<button type="submit">Make Me a Friend!</button>
+		}
+	</div>
+</div>
+
 
 @Html.ActionLink("Go back to all creatures", "Index")

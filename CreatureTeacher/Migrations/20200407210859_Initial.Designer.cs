@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CreatureTeacher.Migrations
 {
     [DbContext(typeof(CreatureTeacherContext))]
-    [Migration("20200407162947_Initial")]
+    [Migration("20200407210859_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,7 +60,7 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Codon");
 
-                    b.Property<bool>("Dominance");
+                    b.Property<string>("Dominance");
 
                     b.Property<string>("Image");
 
@@ -78,7 +78,7 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Codon");
 
-                    b.Property<bool>("Dominance");
+                    b.Property<string>("Dominance");
 
                     b.Property<string>("Image");
 
@@ -96,7 +96,7 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Codon");
 
-                    b.Property<bool>("Dominance");
+                    b.Property<string>("Dominance");
 
                     b.Property<string>("Image");
 
@@ -114,7 +114,7 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Codon");
 
-                    b.Property<bool>("Dominance");
+                    b.Property<string>("Dominance");
 
                     b.Property<string>("Image");
 

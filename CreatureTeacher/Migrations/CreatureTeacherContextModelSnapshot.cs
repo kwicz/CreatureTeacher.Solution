@@ -58,7 +58,7 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Codon");
 
-                    b.Property<bool>("Dominance");
+                    b.Property<string>("Dominance");
 
                     b.Property<string>("Image");
 
@@ -76,7 +76,7 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Codon");
 
-                    b.Property<bool>("Dominance");
+                    b.Property<string>("Dominance");
 
                     b.Property<string>("Image");
 
@@ -94,7 +94,7 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Codon");
 
-                    b.Property<bool>("Dominance");
+                    b.Property<string>("Dominance");
 
                     b.Property<string>("Image");
 
@@ -112,7 +112,7 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Codon");
 
-                    b.Property<bool>("Dominance");
+                    b.Property<string>("Dominance");
 
                     b.Property<string>("Image");
 
