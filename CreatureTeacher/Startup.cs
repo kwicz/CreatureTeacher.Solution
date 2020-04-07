@@ -27,7 +27,7 @@ namespace CreatureTeacher
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CreatureTeacherContext>(opt =>
-            opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+                opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.Configure<CookiePolicyOptions>(options =>
             {
