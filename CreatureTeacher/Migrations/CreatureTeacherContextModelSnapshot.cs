@@ -32,7 +32,11 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("TailID");
+                    b.Property<int>("Parent1Id");
+
+                    b.Property<int>("Parent2Id");
+
+                    b.Property<int>("TailId");
 
                     b.HasKey("CreatureId");
 
@@ -42,7 +46,7 @@ namespace CreatureTeacher.Migrations
 
                     b.HasIndex("MouthId");
 
-                    b.HasIndex("TailID");
+                    b.HasIndex("TailId");
 
                     b.ToTable("Creatures");
                 });
@@ -53,6 +57,8 @@ namespace CreatureTeacher.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Codon");
+
+                    b.Property<bool>("Dominance");
 
                     b.Property<string>("Image");
 
@@ -70,6 +76,8 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Codon");
 
+                    b.Property<bool>("Dominance");
+
                     b.Property<string>("Image");
 
                     b.Property<string>("Name");
@@ -86,6 +94,8 @@ namespace CreatureTeacher.Migrations
 
                     b.Property<string>("Codon");
 
+                    b.Property<bool>("Dominance");
+
                     b.Property<string>("Image");
 
                     b.Property<string>("Name");
@@ -101,6 +111,8 @@ namespace CreatureTeacher.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Codon");
+
+                    b.Property<bool>("Dominance");
 
                     b.Property<string>("Image");
 
@@ -130,7 +142,7 @@ namespace CreatureTeacher.Migrations
 
                     b.HasOne("CreatureTeacher.Models.Tail", "Tail")
                         .WithMany("Creatures")
-                        .HasForeignKey("TailID")
+                        .HasForeignKey("TailId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

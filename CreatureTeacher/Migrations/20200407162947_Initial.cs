@@ -16,7 +16,8 @@ namespace CreatureTeacher.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
                     Codon = table.Column<string>(nullable: true),
-                    Image = table.Column<string>(nullable: true)
+                    Image = table.Column<string>(nullable: true),
+                    Dominance = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,7 +32,8 @@ namespace CreatureTeacher.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
                     Codon = table.Column<string>(nullable: true),
-                    Image = table.Column<string>(nullable: true)
+                    Image = table.Column<string>(nullable: true),
+                    Dominance = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -46,7 +48,8 @@ namespace CreatureTeacher.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
                     Codon = table.Column<string>(nullable: true),
-                    Image = table.Column<string>(nullable: true)
+                    Image = table.Column<string>(nullable: true),
+                    Dominance = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -61,7 +64,8 @@ namespace CreatureTeacher.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
                     Codon = table.Column<string>(nullable: true),
-                    Image = table.Column<string>(nullable: true)
+                    Image = table.Column<string>(nullable: true),
+                    Dominance = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -74,12 +78,14 @@ namespace CreatureTeacher.Migrations
                 {
                     CreatureId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Parent1Id = table.Column<int>(nullable: false),
+                    Parent2Id = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     BirthDate = table.Column<DateTime>(nullable: false),
                     EyeId = table.Column<int>(nullable: false),
                     HeadId = table.Column<int>(nullable: false),
                     MouthId = table.Column<int>(nullable: false),
-                    TailID = table.Column<int>(nullable: false)
+                    TailId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -103,8 +109,8 @@ namespace CreatureTeacher.Migrations
                         principalColumn: "MouthId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Creatures_Tails_TailID",
-                        column: x => x.TailID,
+                        name: "FK_Creatures_Tails_TailId",
+                        column: x => x.TailId,
                         principalTable: "Tails",
                         principalColumn: "TailId",
                         onDelete: ReferentialAction.Cascade);
@@ -126,9 +132,9 @@ namespace CreatureTeacher.Migrations
                 column: "MouthId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Creatures_TailID",
+                name: "IX_Creatures_TailId",
                 table: "Creatures",
-                column: "TailID");
+                column: "TailId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
