@@ -11,30 +11,41 @@
   <p>You have no creatures.  Would you like to create one?</p>
   @Html.ActionLink("Add New Creature", "Create")
 }
-
-@foreach(Creature creature in Model)
-{
-  @Html.ActionLink($"{creature.Name}", "Details", new { id = creature.CreatureId })
-}
-
-<p>Add some buttons here!</p>
-
-
-<!-- Square card -->
-<style>
-.demo-card-square.mdl-card {
-  width: 320px;
-  height: 320px;
-}
-.demo-card-square > .mdl-card__title {
-  color: #fff;
-  background:
-    url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
-}
-</style>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col">
+    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+        <i class="material-icons">add</i>
+      </button>
+              <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            @Html.ActionLink($"Add New", "Create")
+          </a>
+        </div>
+    </div>
+  </div>
+    @foreach(Creature creature in Model)
+    {
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title mdl-card--expand">
+          @* Image will go here *@
+        </div>
+        <div class="mdl-card__supporting-text">
+          @creature.Name
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            @Html.ActionLink($"View Details", "Details", new { id = creature.CreatureId })
+          </a>
+        </div>
+      </div>
+    </div>
+    }
+</div>
 
 @* Example card for each creature *@
-<div class="demo-card-square mdl-card mdl-shadow--2dp">
+@* <div class="demo-card-square mdl-card mdl-shadow--2dp">
   <div class="mdl-card__title mdl-card--expand">
     <h2 class="mdl-card__title-text">Update</h2>
   </div>
@@ -44,7 +55,7 @@
   </div>
   <div class="mdl-card__actions mdl-card--border">
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      View Updates
+      @Html.ActionLink($"View Details", "Details", new { id = creature.CreatureId })
     </a>
   </div>
-</div>
+</div> *@

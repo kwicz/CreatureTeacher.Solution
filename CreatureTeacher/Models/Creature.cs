@@ -24,22 +24,6 @@ namespace CreatureTeacher.Models
     {
 
     }
-
-    // public Creature (int parent1Id, int parent2Id, Eye eye, Mouth mouth,  Head head, Tail tail)
-    // {
-    //   this.Name = "New Creature";
-    //   this.BirthDate = DateTime.Now;
-    //   this.Eye = eye;
-    //   this.EyeId = eye.EyeId;
-    //   this.Head = head;
-    //   this.HeadId = head.HeadId;
-    //   this.Mouth = mouth;
-    //   this.MouthId = mouth.MouthId;
-    //   this.Tail = tail;
-    //   this.TailId = tail.TailId;
-    //   this.Parent1Id = parent1Id;
-    //   this.Parent2Id = parent2Id;
-    // }
     
     public static int CodonScrambler(int id1, string dominance1, int id2, string dominance2)
     {
