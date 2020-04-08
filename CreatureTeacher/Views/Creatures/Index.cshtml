@@ -6,10 +6,21 @@
 @using System.Collections.Generic
 @model List<CreatureTeacher.Models.Creature>
 
+
+<h1>Your Creature Friends!</h1>
 @if (@Model.Count == 0)
 {
-  <p>You have no creatures.  Would you like to create one?</p>
-  @Html.ActionLink("Add New Creature", "Create")
+  <p>Make a New Creature!</p>
+    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+        <i class="material-icons">add</i>
+      </button>
+              <div class="mdl-card__actions mdl-card--border">
+          <a href="/Creatures/Create" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Add New
+            @Html.ActionLink($"Add New", "Create")
+          </a>
+        </div>
+    </div>
 }
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--4-col">
@@ -19,7 +30,7 @@
       </button>
               <div class="mdl-card__actions mdl-card--border">
           <a href="/Creatures/Create" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Add New
-            @Html.ActionLink($"Add New", "Create")
+            @Html.ActionLink($"Add New", "Create")  
           </a>
         </div>
     </div>
@@ -35,9 +46,16 @@
           @creature.Name
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <a asp-controller="Creatures" asp-action="Details" asp-route-creatureid="creature.CreatureId" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Details
+          @* <a asp-controller="Creatures" asp-action="Details" asp-route-id="creature.CreatureId" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Details
             @Html.ActionLink($"View Details", "Details", new { id = creature.CreatureId })
-          </a>
+          </a> *@
+          <p class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">@Html.ActionLink("View Details", "Details", new { id = creature.CreatureId})</p>
+
+          @using (Html.BeginForm())
+          {
+            @Html.HiddenFor(model => model.Creature.CreatureId)
+            <input type="submit" value="View Details">
+          }
         </div>
       </div>
     </div>

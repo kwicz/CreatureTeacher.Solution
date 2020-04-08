@@ -60,8 +60,9 @@ namespace CreatureTeacher.Controllers
     public ActionResult CreateChild()
     {
       // List<Creature> model = _db.Creatures.ToList();
-      ViewBag.CreatureId = new SelectList(_db.Creatures, "CreatureId", "Name");
-      return View();
+      // ViewBag.CreatureId = new SelectList(_db.Creatures, "CreatureId", "Name");
+      List<Creature> model = _db.Creatures.ToList();
+      return View(model);
     }
       
     [HttpPost]
@@ -104,7 +105,7 @@ namespace CreatureTeacher.Controllers
     }
 
     [Route("Creature/{id:int}")]
-    public ActionResult Details(int id)
+    public IActionResult Details(int id)
     {
       Creature thisCreature = _db.Creatures.FirstOrDefault(creature => creature.CreatureId == id);
       return View(thisCreature); 

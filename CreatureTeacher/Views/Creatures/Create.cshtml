@@ -5,24 +5,37 @@
 @model CreatureTeacher.Models.Creature
 
 <div class="mdl-grid">
-  <div id="creature" class="mdl-cell mdl-cell--6-col">
-		@Html.Partial("_ShowCreature")
+  <div class="mdl-cell mdl-cell--4-col">
+		<div id="creature">
+			@Html.Partial("_ShowCreature")
+		</div>
 	</div>
-  <div class="mdl-cell mdl-cell--6-col">
-		@using (Html.BeginForm())
-		{
-			@Html.LabelFor(model => model.Name)
-			@Html.EditorFor(model => model.Name)
-			@Html.LabelFor(model => model.Eye)
-			@Html.DropDownList("EyeId")
-			@Html.LabelFor(model => model.Mouth)
-			@Html.DropDownList("MouthId")
-			@Html.LabelFor(model => model.Head)
-			@Html.DropDownList("HeadId")
-			@Html.LabelFor(model => model.Tail)
-			@Html.DropDownList("TailId")
-			<button type="submit">Make Me a Friend!</button>
-		}
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+		<div class="demo-card-square mdl-card mdl-shadow--2dp">
+			@using (Html.BeginForm())
+			{
+				@Html.LabelFor(model => model.Name)
+				@Html.EditorFor(model => model.Name)
+				@Html.LabelFor(model => model.Eye)
+				@Html.DropDownList("EyeId")
+				@Html.LabelFor(model => model.Mouth)
+				@Html.DropDownList("MouthId")
+				@Html.LabelFor(model => model.Head)
+				@Html.DropDownList("HeadId")
+				@Html.LabelFor(model => model.Tail)
+				@Html.DropDownList("TailId")
+				<button type="submit">Make Me a Friend!</button>
+			}
+  	</div>
+	</div>
+  <div class="mdl-cell mdl-cell--4-col">
+		<div class="demo-card-square mdl-card mdl-shadow--2dp">
+			<form action="/Creatures/Create" method="post">
+				<label for="name">Creature Name</label>
+				<input id="name" name="name" type="text" value="@Model.Name">
+			</form>
+  	</div>
 	</div>
 </div>
 
