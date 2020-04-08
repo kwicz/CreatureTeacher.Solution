@@ -1,1 +1,13 @@
-<img src="../img/creatureImages/bodies/creature-test.png" width="500">
+@{  
+  string bodyImagePath = Url.Content("../img/creatureImages/bodies/" + @ViewBag.Parent1Body + ".png");
+  string eyeImagePath = Url.Content("../img/creatureImages/eyes/" + @ViewBag.Parent1Eye + ".png");
+  string mouthImagePath = Url.Content("../img/creatureImages/mouths/" + @ViewBag.Parent1Mouth + ".png");
+  string headImagePath = Url.Content("../img/creatureImages/hair/" + @ViewBag.Parent1Head + ".png");
+  string tailImagePath = Url.Content("../img/creatureImages/tails/" + @ViewBag.Parent1Tail + ".png");
+}
+<div class="format-creature">
+  <img src="@bodyImagePath" width="500" id="body">
+  <img src="@eyeImagePath" width="500" id="eye">
+  <img src="@mouthImagePath" width="500" id="mouth">
+  <img src="@tailImagePath" width="500" id="tail">
+</div>

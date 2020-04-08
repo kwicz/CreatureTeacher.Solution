@@ -2,15 +2,21 @@
 	ViewData["Title"] = "Home Page";
 }
 
+
 @using CreatureTeacher.Models
 @model CreatureTeacher.Models.Creature
 
+<img src="../../img/creatureImages/bodies/body-blue.png" width="500" id="bodyImg">
+<img src="../../img/creatureImages/mouths/@Url.Content(Model.Mouth.Image)" width="500" id="mouthImg">
+<img src="../../img/creatureImages/eyes/@Url.Content(Model.Eye.Image)" width="500" id="eyesImg">
+<img src="../../img/creatureImages/tails/@Url.Content(Model.Tail.Image)" width="500" id="tailImg">
+<img src="../../img/creatureImages/hair/@Url.Content(Model.Head.Image)" width="500" id="headImg">
+
 @Html.DisplayFor(model => model.Name)'s Creature Features: 
 <ul>
-    <li>@Model.Eye</li>
-    <li>@Html.ActionLink($"{Model.Eye.Name}", "Details", "Eyes", new { id = Model.EyeId })</li>
-    <li>@Html.ActionLink($"{Model.MouthId}", "Details", "Mouth", new { id = Model.MouthId })</li>
-    <li>@Html.ActionLink($"{Model.HeadId}", "Details", "Head", new { id = Model.HeadId })</li>
-    <li>@Html.ActionLink($"{Model.TailId}", "Details", "Tail", new { id = Model.TailId })</li>
+    <li>@Html.ActionLink($"{Model.Eye.Name}", "Details", "Eye", new { id = Model.MouthId })</li>
+    <li>@Html.ActionLink($"{Model.Mouth.Name}", "Details", "Mouth", new { id = Model.MouthId })</li>
+    <li>@Html.ActionLink($"{Model.Head.Name}", "Details", "Head", new { id = Model.HeadId })</li>
+    <li>@Html.ActionLink($"{Model.Tail.Name}", "Details", "Tail", new { id = Model.TailId })</li> 
 </ul>
 @Html.ActionLink("Back to List", "Index")<div class="mdc-card demo-card demo-ui-control">

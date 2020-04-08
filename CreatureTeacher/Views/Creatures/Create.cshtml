@@ -16,7 +16,7 @@
 			<form action="/Creatures/Create" method="post">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<label for="name" class="mdl-textfield__label">Creature Name</label>
-					<input id="name" name="name" type="text" class="mdl-textfield__input">
+					<input id="name" name="name" type="text" class="mdl-textfield__input" required>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield getmdl-select">
 					@Html.LabelFor(model => model.Eye)

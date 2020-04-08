@@ -1,0 +1,16 @@
+1,ChillBlack,ATT,mouth-chill-black.png,TRUE
+2,ChillNavy,ATC,mouth-chill-navy.png,FALSE
+3,ChillCrimson,ATA,mouth-chill-crimson.png,TRUE
+4,ChillViolet,ATB,mouth-chill-violet.png,FALSE
+5,TeethBlack,ACT,mouth-teeth-black.png,TRUE
+6,TeethNavy,ACC,mouth-teeth-navy.png,FALSE
+7,TeethCrimson,ACA,mouth-teeth-crimson.png,TRUE
+8,TeethViolet,ACG,mouth-teeth-violet.png,FALSE
+9,HappyBlack,AAT,mouth-happy-black.png,TRUE
+10,HappyNavy,AAC,mouth-happy-navy.png,FALSE
+11,HappyCrimson,AAA,mouth-happy-crimson.png,TRUE
+12,HappyViolet,AAG,mouth-happy-violet.png,FALSE
+13,SadBlack,AGT,mouth-sad-black.png,TRUE
+14,SadNavy,AGC,mouth-sad-navy.png,FALSE
+15,SadCrimson,AGA,mouth-sad-crimson.png,TRUE
+16,SadViolet,AGG,mouth-sad-violet.png,FALSE

@@ -21,7 +21,7 @@
       @* Parent Thumbnail Pics *@
       @foreach (Creature creature in @Model)
       {
-        <a href='@Url.Action("SelectParent1","Creatures", new { parent1 = "creature-test"})'>
+        <a href='@Url.Action("SelectParent1","Creatures", new { parent1Id = creature.CreatureId})'>
           <img src="../img/creatureImages/bodies/creature-test.png" width="100">
         </a>
       } 
@@ -33,7 +33,7 @@
       @* Parent Thumbnail Pics *@
       @foreach (Creature creature in @Model)
       {
-        <a href='@Url.Action("SelectParent2","Creatures", new { parent2 = "creature-test"})'>
+        <a href='@Url.Action("SelectParent2","Creatures", new { parent2Id = creature.CreatureId})'>
           <img src="../img/creatureImages/bodies/creature-test.png" width="100">
         </a>
       }
@@ -51,7 +51,7 @@
     <div class="mdl-cell mdl-cell--6-col">
       Parent 2!
       <div class="select-circle">
-      @Html.Partial("_Parent1")
+      @Html.Partial("_Parent2")
       </div>
     </div>
   </div>

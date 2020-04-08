@@ -30,9 +30,7 @@
         <i class="material-icons">add</i>
       </button>
               <div class="mdl-card__actions mdl-card--border">
-          <a href="/Creatures/Create" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Add New
-            @Html.ActionLink($"Add New", "Create")  
-          </a>
+          <a href="/Creatures/Create" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Add New</a>
         </div>
     </div>
   </div>
@@ -43,14 +41,8 @@
         <div class="mdl-card__title mdl-card--expand">
          @* Image will go here *@
         </div>
-        <div class="mdl-card__supporting-text">
-          @creature.Name
-        </div>
         <div class="mdl-card__actions mdl-card--border">
-          @* <a asp-controller="Creatures" asp-action="Details" asp-route-id="creature.CreatureId" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Details
-            @Html.ActionLink($"View Details", "Details", new { id = creature.CreatureId })
-          </a> *@
-          <p class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">@Html.ActionLink("Say Hey", "Details", new { id = creature.CreatureId})</p>
+          <a href="/Creatures/Details/@creature.CreatureId" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">@creature.Name</a>
         </div>
       </div>
     </div>

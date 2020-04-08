@@ -78,3 +78,27 @@ h1, .mdl-layout-title{
   font-family: 'Bungee', cursive;
 }
 
+#bodyImg {
+  position: absolute;
+  z-index: 1;
+}
+
+#mouthImg {
+  position: absolute;
+  z-index: 2;
+}
+
+#eyesImg {
+  position: absolute;
+  z-index: 3;
+}
+
+#headImg {
+  position: absolute;
+  z-index: 4;
+}
+
+#tailImg {
+  position: absolute;
+  z-index: 5;
+}

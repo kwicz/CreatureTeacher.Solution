@@ -54,26 +54,37 @@ namespace CreatureTeacher.Controllers
       creature.TailId = tailId;
       _db.Creatures.Add(creature);
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Details", new{ id=creature.CreatureId});
     }
 
     public ActionResult CreateChild()
     {
-      // List<Creature> model = _db.Creatures.ToList();
-      // ViewBag.CreatureId = new SelectList(_db.Creatures, "CreatureId", "Name");
       List<Creature> model = _db.Creatures.ToList();
+      ViewBag.Parent1Body = "body-yellow";
+      ViewBag.Parent1Eye = "eyes-fancy-black";
+      ViewBag.Parent1Head = "hair-mohawk-green";
+      ViewBag.Parent1Mouth = "mouth-happy-violet";
+      ViewBag.Parent1Tail = "tail-fox-red";
+      ViewBag.Parent2 = "creature-test";
       return View(model);
     }
 
-    public ActionResult SelectParent1(string parent1)
+    public ActionResult SelectParent1(int parent1Id)
     {
-      string parent1Image = "../img/creatureImages/bodies/" + parent1 + ".png";
-      return View("CreateChild", parent1Image);
+      List<Creature> model = _db.Creatures.ToList();
+      Creature thisCreature = _db.Creatures.FirstOrDefault(parentId => parentId.CreatureId == parent1Id);
+      // string parent1 = thisCreature.Name <<<<HOW TO TARGET IMAGE FILE?
+      string parent1 = "body-yellow";
+      ViewBag.Parent1 = "../img/creatureImages/bodies/" + parent1 + ".png";
+      return View("CreateChild", model);
     }
-    public ActionResult SelectParent2(string parent2)
+    public ActionResult SelectParent2(int parent2Id)
     {
+      List<Creature> model = _db.Creatures.ToList();
+      string parent2 = "body-blue";
       string parent2Image = "../img/creatureImages/bodies/" + parent2 + ".png";
-      return View("CreateChild", parent2Image);
+      ViewBag.Parent2 = parent2Image;
+      return View("CreateChild", model);
     }
       
     [HttpPost]
@@ -118,8 +129,13 @@ namespace CreatureTeacher.Controllers
     // [Route("Creature/{id:int}")]
     public ActionResult Details(int id)
     {
-      Creature thisCreature = _db.Creatures.FirstOrDefault(creature => creature.CreatureId == id);
-      return View(thisCreature); 
+      Creature thisCreature = _db.Creatures
+      .Include(creature => creature.Eye)
+      .Include(creature => creature.Mouth)
+      .Include(creature => creature.Head)
+      .Include(creature => creature.Tail)
+      .FirstOrDefault(creature => creature.CreatureId == id);
+      return View(thisCreature);
     }
 
     public ActionResult Delete(int id)

@@ -1,1 +1,6 @@
-<img src="../img/creatureImages/bodies/creature-test.png" width="500">
+@{  
+  string bodyImagePath = Url.Content("../img/creatureImages/bodies/" + @ViewBag.Parent2 + ".png");
+}
+<div>
+<img src="@bodyImagePath" width="500">
+</div>

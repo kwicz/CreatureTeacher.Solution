@@ -1,0 +1,24 @@
+Id,Name,Codon,Image,Dominance
+1,SquirrelPink,GTT,tail-squirrel-pink.png,TRUE
+2,SquirrelPurple,GTC,tail-squirrel-purple.png,FALSE
+3,SquirrelOrange,GTA,tail-squirrel-orange.png,TRUE
+4,SquirrelRed,GTG,tail-squirrel-red.png,FALSE
+5,FoxPink,GCT,tail-fox-pink.png,TRUE
+6,FoxPurple,GCC,tail-fox-purple.png,FALSE
+7,FoxOrange,GCA,tail-fox-orange.png,TRUE
+8,FoxRed,GCG,tail-fox-red.png,FALSE
+9,BulbPink,GAT,tail-bulb-pink.png,TRUE
+10,BulbPurple,GAC,tail-bulb-purple.png,FALSE
+11,BulbOrange,GAA,tail-bulb-orange.png,TRUE
+12,BulbRed,GAG,tail-bulb-red.png,FALSE
+13,FancyPink,GGT,tail-fancy-pink.png,TRUE
+14,FancyPurple,GGC,tail-fancy-purple.png,FALSE
+15,FancyOrange,GGA,tail-fancy-orange.png,TRUE
+16,FancyRed,GGG,tail-fancy-red.png,FALSE
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,   ,,,
