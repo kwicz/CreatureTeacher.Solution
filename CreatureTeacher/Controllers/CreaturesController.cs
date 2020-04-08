@@ -65,10 +65,8 @@ namespace CreatureTeacher.Controllers
     }
       
     [HttpPost]
-    public ActionResult CreateChild()
+    public ActionResult CreateChild(int parent1Id, int parent2Id)
     {
-      int parent1Id = 13;
-      int parent2Id = 14;
       Console.WriteLine("PARENT 1 ID: ", parent1Id);
       // Get parent objects
       Creature parent1 = _db.Creatures.Where(parent => parent.CreatureId == parent1Id).FirstOrDefault();
@@ -105,6 +103,7 @@ namespace CreatureTeacher.Controllers
       return RedirectToAction("Index");
     }
 
+    [Route("Creature/{id:int}")]
     public ActionResult Details(int id)
     {
       Creature thisCreature = _db.Creatures.FirstOrDefault(creature => creature.CreatureId == id);
