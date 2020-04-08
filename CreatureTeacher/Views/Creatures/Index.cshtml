@@ -12,14 +12,15 @@
 {
   <p>Make a New Creature!</p>
     <div class="demo-card-square mdl-card mdl-shadow--2dp">
-      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+      <a href="/Creatures/Create" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
         <i class="material-icons">add</i>
-      </button>
+      </a>
               <div class="mdl-card__actions mdl-card--border">
           <a href="/Creatures/Create" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Add New
             @Html.ActionLink($"Add New", "Create")
           </a>
         </div>
+      
     </div>
 }
 <div class="mdl-grid">
@@ -49,7 +50,7 @@
           @* <a asp-controller="Creatures" asp-action="Details" asp-route-id="creature.CreatureId" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Details
             @Html.ActionLink($"View Details", "Details", new { id = creature.CreatureId })
           </a> *@
-          <p class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">@Html.ActionLink("View Details", "Details", new { id = creature.CreatureId})</p>
+          <p class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">@Html.ActionLink("Say Hey", "Details", new { id = creature.CreatureId})</p>
         </div>
       </div>
     </div>
