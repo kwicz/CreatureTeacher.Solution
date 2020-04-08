@@ -7,10 +7,10 @@
 
 @Html.DisplayFor(model => model.Name)'s Creature Features: 
 <ul>
-    @* <li>@Model.Eye</li> *@
-    @* <li>@Html.ActionLink($"{Model.Eye.Name}", "Details", "Eyes", new { id = Model.EyeId })</li>
+    <li>@Model.Eye</li>
+    <li>@Html.ActionLink($"{Model.Eye.Name}", "Details", "Eyes", new { id = Model.EyeId })</li>
     <li>@Html.ActionLink($"{Model.MouthId}", "Details", "Mouth", new { id = Model.MouthId })</li>
     <li>@Html.ActionLink($"{Model.HeadId}", "Details", "Head", new { id = Model.HeadId })</li>
-    <li>@Html.ActionLink($"{Model.TailId}", "Details", "Tail", new { id = Model.TailId })</li> *@
+    <li>@Html.ActionLink($"{Model.TailId}", "Details", "Tail", new { id = Model.TailId })</li>
 </ul>
 @Html.ActionLink("Back to List", "Index")<div class="mdc-card demo-card demo-ui-control">

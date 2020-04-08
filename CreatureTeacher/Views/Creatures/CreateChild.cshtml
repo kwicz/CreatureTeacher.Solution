@@ -21,7 +21,9 @@
       @* Parent Thumbnail Pics *@
       @foreach (Creature creature in @Model)
       {
-        <img src="../img/creatureImages/bodies/creature-test.png" width="100">
+        <a href='@Url.Action("SelectParent1","Creatures", new { parent1 = "creature-test"})'>
+          <img src="../img/creatureImages/bodies/creature-test.png" width="100">
+        </a>
       } 
       @* @Html.LabelFor(model => model.Name)
 			@Html.DropDownList("CreatureId") *@
@@ -31,13 +33,28 @@
       @* Parent Thumbnail Pics *@
       @foreach (Creature creature in @Model)
       {
-        <img src="../img/creatureImages/bodies/creature-test.png" width="100">
+        <a href='@Url.Action("SelectParent2","Creatures", new { parent2 = "creature-test"})'>
+          <img src="../img/creatureImages/bodies/creature-test.png" width="100">
+        </a>
       }
       @* @Html.LabelFor(model => model.Name)
 			@Html.DropDownList("CreatureId") *@
     </div>
   </div>
-
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      Parent 1!
+      <div class="select-circle">
+      @Html.Partial("_Parent1")
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      Parent 2!
+      <div class="select-circle">
+      @Html.Partial("_Parent1")
+      </div>
+    </div>
+  </div>
   <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
     Breed those Bad Mamma Jammas
   </button>

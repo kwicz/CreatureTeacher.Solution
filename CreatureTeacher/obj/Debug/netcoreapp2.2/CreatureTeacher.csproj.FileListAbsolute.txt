@@ -34,3 +34,5 @@
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/CreatureTeacher.csproj.CopyComplete
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ShowCreature.g.cshtml.cs
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/CreateChild.g.cshtml.cs
+/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Parent1.g.cshtml.cs
+/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Parent2.g.cshtml.cs

@@ -32,8 +32,34 @@
   <div class="mdl-cell mdl-cell--4-col">
 		<div class="demo-card-square mdl-card mdl-shadow--2dp">
 			<form action="/Creatures/Create" method="post">
-				<label for="name">Creature Name</label>
-				<input id="name" name="name" type="text" value="@Model.Name">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<label for="name" class="mdl-textfield__label">Creature Name</label>
+					<input id="name" name="name" type="text" class="mdl-textfield__input">
+				</div>
+				<div class="dropdown">
+					<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eyes
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						@* @foreach (Eye eye in Model)
+						{
+							<a class="dropdown-item"></a>
+						}) *@
+					</div>
+					@Html.LabelFor(model => model.Eye)
+					@Html.DropDownList("EyeId")
+				</div>
+				<div>
+					@Html.LabelFor(model => model.Mouth)
+					@Html.DropDownList("MouthId")	
+				</div>
+				<div>
+					@Html.LabelFor(model => model.Head)
+					@Html.DropDownList("HeadId")
+				</div>
+				<div>
+					@Html.LabelFor(model => model.Tail)
+					@Html.DropDownList("TailId")
+				</div>
+				<button type="submit">Make Me a Friend!</button>
 			</form>
   	</div>
 	</div>

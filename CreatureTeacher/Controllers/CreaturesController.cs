@@ -64,6 +64,17 @@ namespace CreatureTeacher.Controllers
       List<Creature> model = _db.Creatures.ToList();
       return View(model);
     }
+
+    public ActionResult SelectParent1(string parent1)
+    {
+      string parent1Image = "../img/creatureImages/bodies/" + parent1 + ".png";
+      return View("CreateChild", parent1Image);
+    }
+    public ActionResult SelectParent2(string parent2)
+    {
+      string parent2Image = "../img/creatureImages/bodies/" + parent2 + ".png";
+      return View("CreateChild", parent2Image);
+    }
       
     [HttpPost]
     public ActionResult CreateChild(int parent1Id, int parent2Id)
