@@ -115,7 +115,7 @@ namespace CreatureTeacher.Controllers
       return RedirectToAction("Index");
     }
 
-    [Route("Creature/{id:int}")]
+    // [Route("Creature/{id:int}")]
     public IActionResult Details(int id)
     {
       Creature thisCreature = _db.Creatures.FirstOrDefault(creature => creature.CreatureId == id);
