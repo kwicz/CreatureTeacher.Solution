@@ -116,7 +116,7 @@ namespace CreatureTeacher.Controllers
     }
 
     // [Route("Creature/{id:int}")]
-    public IActionResult Details(int id)
+    public ActionResult Details(int id)
     {
       Creature thisCreature = _db.Creatures.FirstOrDefault(creature => creature.CreatureId == id);
       return View(thisCreature); 

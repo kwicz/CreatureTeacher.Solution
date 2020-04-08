@@ -5,37 +5,38 @@
 @model CreatureTeacher.Models.Creature
 
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
+  <div class="mdl-cell mdl-cell--6-col">
 		<div id="creature">
 			@Html.Partial("_ShowCreature")
 		</div>
 	</div>
-  <div class="mdl-cell mdl-cell--4-col"></div>
-  <div class="mdl-cell mdl-cell--4-col">
-		<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  @* <div class="mdl-cell mdl-cell--2-col"></div> *@
+  <div class="mdl-cell mdl-cell--6-col">
+
 			<form action="/Creatures/Create" method="post">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<label for="name" class="mdl-textfield__label">Creature Name</label>
 					<input id="name" name="name" type="text" class="mdl-textfield__input">
 				</div>
-				<div>
+				<div class="mdl-textfield mdl-js-textfield getmdl-select">
 					@Html.LabelFor(model => model.Eye)
-					@Html.DropDownList("EyeId")
+					@Html.DropDownList("EyeId", null, new { @class="mdl-textfield__input"})
 				</div>
-				<div>
+				<div class="mdl-textfield mdl-js-textfield getmdl-select">
 					@Html.LabelFor(model => model.Mouth)
-					@Html.DropDownList("MouthId")	
+					@Html.DropDownList("MouthId", null, new { @class="mdl-textfield__input"})	
 				</div>
-				<div>
+				<div class="mdl-textfield mdl-js-textfield getmdl-select">
 					@Html.LabelFor(model => model.Head)
-					@Html.DropDownList("HeadId")
+					@Html.DropDownList("HeadId", null, new { @class="mdl-textfield__input"})
 				</div>
-				<div>
+				<div class="mdl-textfield mdl-js-textfield getmdl-select">
 					@Html.LabelFor(model => model.Tail)
-					@Html.DropDownList("TailId")
+					@Html.DropDownList("TailId", null, new { @class="mdl-textfield__input"})
 				</div>
-				<button type="submit">Make Me a Friend!</button>
+				<br>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Make Me a Friend!</button>
 			</form>
-  	</div>
 	</div>
 </div>
+
