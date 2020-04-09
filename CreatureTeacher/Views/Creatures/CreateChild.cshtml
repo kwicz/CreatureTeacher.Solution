@@ -7,7 +7,7 @@
 @model List<CreatureTeacher.Models.Creature>
 
 <h1>It's time to make a baby creature!</h1>
-<h3>Step 1: Pick the first parent for this new creature.</h3>
+<h2>Pick 2 parents to create a new creature.</h2>
 
 @if (@Model.Count == 0)
 {
@@ -17,7 +17,8 @@
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    Pick A Parent!
+  Pick Parent 1!
+    
     @* Parent Thumbnail Pics *@
     @foreach (Creature creature in @Model)
     {
@@ -28,7 +29,7 @@
 
   </div>
   <div class="mdl-cell mdl-cell--6-col">
-    Pick A Second Parent!
+  Pick Parent 2!
     @* Parent Thumbnail Pics *@
     @foreach (Creature creature in @Model)
     {

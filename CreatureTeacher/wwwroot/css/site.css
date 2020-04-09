@@ -1,6 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Chewy&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+﻿
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
 
@@ -144,4 +142,8 @@ h1, .mdl-layout-title{
 
 .new-creature-form table {
   width: 40px;
+}
+
+.get-started {
+  padding: 20px;
 }
