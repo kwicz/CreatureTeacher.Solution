@@ -1,6 +1,8 @@
 ﻿
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Paaji+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 
 .format-creature {
@@ -52,6 +54,8 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
   text-align: center;
+  /* font-family: 'Baloo Paaji 2', cursive; */
+  font-family: 'Montserrat', sans-serif;
 }
 
 .footer {
@@ -76,7 +80,7 @@ body {
 .demo-card-square > .mdl-card__title {
   color: #fff;
   background:
-    url('../img/creatureImages/bodies/creature-test.png') bottom right 15% no-repeat #ec407a;
+    url('../img/creatureImages/bodies/creature-test.png') bottom right 15% no-repeat #F26868;
 }
 h1, .mdl-layout-title{
   font-family: 'Bungee', cursive;
@@ -146,4 +150,20 @@ h1, .mdl-layout-title{
 
 .get-started {
   padding: 20px;
+}
+
+.splash {
+  margin-top: 0px;
+}
+
+.splashTop {
+  margin-top: -75px;
+  margin-bottom: -250px;
+}
+.logo a {
+  color: #F26868;
+}
+
+.mdl-layout-drawer {
+  color: #F26868;
 }

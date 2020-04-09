@@ -104,3 +104,49 @@
       ViewBag.Parent2Tail = parent2.Tail.Image;
       return View("CreateChild", model);
     }
+
+
+
+
+    [HttpPost]
+    public ActionResult CreateChild(int parent1Id, int parent2Id)
+    {
+      Console.WriteLine("~~~~~~~~~~~~~~~~~~~PARENT 2 ID: ", parent2Id);
+      Creature newBaby = _db.Creatures.Last();
+      Creature parent1 = _db.Creatures.FirstOrDefault(parent => parent.CreatureId == newBaby.Parent1Id);
+      // Creature parent2 = _db.Creatures.FirstOrDefault(parent => parent.CreatureId == newBaby.Parent2Id);
+      // Console.WriteLine("PARENT 1 ID: ", parent1Id);
+      // Get parent objects
+      // Creature parent1 = _db.Creatures.Where(parent => parent.CreatureId == parent1Id).FirstOrDefault();
+      Creature parent2 = _db.Creatures.Where(parent => parent.CreatureId == parent2Id).FirstOrDefault();
+
+      // Console.WriteLine(parent1.CreatureId);
+      // Console.WriteLine(parent2.CreatureId);
+
+      // // Create new codons for a new creature
+      // int eyeId = Creature.CodonScrambler(parent1.Eye.EyeId, parent1.Eye.Dominance, parent2.Eye.EyeId, parent2.Eye.Dominance);
+      // int mouthId = Creature.CodonScrambler(parent1.Mouth.MouthId, parent1.Mouth.Dominance, parent2.Mouth.MouthId, parent2.Mouth.Dominance);
+      // int headId = Creature.CodonScrambler(parent1.Head.HeadId, parent1.Head.Dominance, parent2.Head.HeadId, parent2.Head.Dominance);
+      // int tailId = Creature.CodonScrambler(parent1.Tail.TailId, parent1.Tail.Dominance, parent2.Tail.TailId, parent2.Tail.Dominance);
+
+      // // Get new feature objects based on codons
+      // var thisEye = _db.Eyes.FirstOrDefault(eyes => eyes.EyeId == eyeId);
+      // var thisMouth = _db.Mouths.FirstOrDefault(mouths => mouths.MouthId == mouthId);
+      // var thisHead = _db.Heads.FirstOrDefault(head => head.HeadId == headId);
+      // var thisTail = _db.Tails.FirstOrDefault(tail => tail.TailId == tailId);
+
+      // //Create Child with Creature Constructor
+      // Creature creature = new Creature();
+      // creature.Name = "New Creature";
+      // creature.Eye = thisEye;
+      // creature.EyeId = eyeId;
+      // creature.Mouth = thisMouth;
+      // creature.MouthId = mouthId;
+      // creature.Head = thisHead;
+      // creature.HeadId = headId;
+      // creature.Tail = thisTail;
+      // creature.TailId = tailId;
+      // _db.Creatures.Add(creature);
+      // _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
