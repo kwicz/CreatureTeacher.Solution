@@ -2,61 +2,62 @@
 	ViewData["Title"] = "Home Page";
 }
 
-@* @using CreatureTeacher.Models
+@using CreatureTeacher.Models
 @using System.Collections.Generic
-@model CreatureTeacher.Models.Creature *@
-
 @model List<CreatureTeacher.Models.Creature>
+
+<h1>It's time to make a baby creature!</h1>
+<h3>Step 1: Pick the first parent for this new creature.</h3>
+
 @if (@Model.Count == 0)
 {
-  <p>You have no creatures.  Would you like to create one?</p>
-  @Html.ActionLink("Add New Creature", "Create")
+  <p>Ruh Roh. You haven't built any creatures yet!</p>
+  @Html.ActionLink("Build a New Friend", "Create")
 } 
-@using (Html.BeginForm())
-{
 
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      Pick A Parent!
-      @* Parent Thumbnail Pics *@
-      @foreach (Creature creature in @Model)
-      {
-        <a href='@Url.Action("SelectParent1","Creatures", new { parent1Id = creature.CreatureId})'>
-          <img src="../img/creatureImages/bodies/creature-test.png" width="100">
-        </a>
-      } 
-      @* @Html.LabelFor(model => model.Name)
-			@Html.DropDownList("CreatureId") *@
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      Pick A Parent!
-      @* Parent Thumbnail Pics *@
-      @foreach (Creature creature in @Model)
-      {
-        <a href='@Url.Action("SelectParent2","Creatures", new { parent2Id = creature.CreatureId})'>
-          <img src="../img/creatureImages/bodies/creature-test.png" width="100">
-        </a>
-      }
-      @* @Html.LabelFor(model => model.Name)
-			@Html.DropDownList("CreatureId") *@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    Pick A Parent!
+    @* Parent Thumbnail Pics *@
+    @foreach (Creature creature in @Model)
+    {
+      <a href='@Url.Action("SelectParent1","Creatures", new { parent1Id = creature.CreatureId})'>
+        <img src="../img/creatureImages/bodies/creature-test.png" width="100">
+      </a>
+    }
+
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    Pick A Second Parent!
+    @* Parent Thumbnail Pics *@
+    @foreach (Creature creature in @Model)
+    {
+      <a href='@Url.Action("SelectParent2","Creatures", new { parent2Id = creature.CreatureId})'>
+        <img src="../img/creatureImages/bodies/creature-test.png" width="100">
+      </a>
+    }
+  </div>
+</div>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    Parent 1!
+    <div class="select-circle">
+    @Html.Partial("_Parent1")
     </div>
   </div>
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      Parent 1!
-      <div class="select-circle">
-      @Html.Partial("_Parent1")
-      </div>
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      Parent 2!
-      <div class="select-circle">
-      @Html.Partial("_Parent2")
-      </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    Parent 2!
+    <div class="select-circle">
+    @Html.Partial("_Parent2")
     </div>
   </div>
+</div>
+
+<a href='@Url.Action("Details","Creatures", new { newBabyId = @ViewBag.NewBabyId})'>
   <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
     Breed those Bad Mamma Jammas
   </button>
+</a>
 
-}
+
+

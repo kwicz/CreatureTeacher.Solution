@@ -10,7 +10,7 @@
 10,DizzyRed,TAC,eyes-dizzy-red.png,FALSE
 11,DizzyGreen,TAA,eyes-dizzy-green.png,TRUE
 12,DizzyPurple,TAG,eyes-dizzy-purple.png,FALSE
-13,SadBlack,TGT,eyes-sad-black.png,TRUE
-14,SadRed,TGC,eyes-sad-red.png,FALSE
-15,SadGreen,TGA,eyes-sad-green.png,TRUE
-16,SadPurple,TGG,eyes-sad-purple.png,FALSE
+13,SleepyBlack,TGT,eyes-sleepy-black.png,TRUE
+14,SleepyRed,TGC,eyes-sleepy-red.png,FALSE
+15,SleepyGreen,TGA,eyes-sleepy-green.png,TRUE
+16,SleepyPurple,TGG,eyes-sleepy-purple.png,FALSE

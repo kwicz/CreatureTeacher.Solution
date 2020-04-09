@@ -15,18 +15,17 @@
       <a href="/Creatures/Create" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
         <i class="material-icons">add</i>
       </a>
-              <div class="mdl-card__actions mdl-card--border">
+        <div class="mdl-card__actions mdl-card--border">
           <a href="/Creatures/Create" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Add New
-            @Html.ActionLink($"Add New", "Create")
-          </a>
-        </div>
-      
+          @Html.ActionLink($"Add New", "Create")
+        </a>
+      </div>
     </div>
 }
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--4-col">
     <div class="demo-card-square mdl-card mdl-shadow--2dp">
-      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+      <button onclick="window.location.href = '/Creatures/Create';" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
         <i class="material-icons">add</i>
       </button>
               <div class="mdl-card__actions mdl-card--border">
@@ -34,13 +33,43 @@
         </div>
     </div>
   </div>
+
     @foreach(Creature creature in Model)
     {
     <div class="mdl-cell mdl-cell--4-col">
       <div class="demo-card-square mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title mdl-card--expand">
-         @* Image will go here *@
+        <img src="../../img/creatureImages/bodies/body-blue.png" width="250" id="bodyImg">
+        @foreach (var eye in ViewBag.Eye)
+        {
+          if (eye.EyeId == creature.EyeId)
+          {
+            <img src="../../img/creatureImages/eyes/@Url.Content(eye.Image)" width="250" id="eyesImg">
+          }
+        }
+        @foreach (var mouth in ViewBag.Mouth)
+        {
+          if (mouth.MouthId == creature.MouthId)
+          {
+            <img src="../../img/creatureImages/mouths/@Url.Content(mouth.Image)" width="250" id="mouthImg">
+          }
+        }
+        @foreach (var tail in ViewBag.Tail)
+        {
+          if (tail.TailId == creature.TailId)
+          {
+            <img src="../../img/creatureImages/tails/@Url.Content(tail.Image)" width="250" id="tailImg">
+          }
+        }
+        @foreach (var head in ViewBag.Head)
+        {
+          if (head.HeadId == creature.HeadId)
+          {
+            <img src="../../img/creatureImages/hair/@Url.Content(head.Image)" width="250" id="headImg">
+          }
+        }
         </div>
+
         <div class="mdl-card__actions mdl-card--border">
           <a href="/Creatures/Details/@creature.CreatureId" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">@creature.Name</a>
         </div>

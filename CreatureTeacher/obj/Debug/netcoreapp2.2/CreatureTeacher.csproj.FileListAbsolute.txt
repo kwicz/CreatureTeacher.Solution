@@ -15,6 +15,8 @@
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/CreatureTeacher.TagHelpers.output.cache
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/CreatureTeacher.RazorCoreGenerate.cache
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/Create.g.cshtml.cs
+/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/CreateChild copy.g.cshtml.cs
+/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/CreateChild.g.cshtml.cs
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/Delete.g.cshtml.cs
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/Details.g.cshtml.cs
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/Index.g.cshtml.cs
@@ -23,6 +25,9 @@
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.g.cshtml.cs
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs
+/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Parent1.g.cshtml.cs
+/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Parent2.g.cshtml.cs
+/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ShowCreature.g.cshtml.cs
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.g.cshtml.cs
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.g.cshtml.cs
@@ -32,7 +37,5 @@
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/CreatureTeacher.dll
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/CreatureTeacher.pdb
 /Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/CreatureTeacher.csproj.CopyComplete
-/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ShowCreature.g.cshtml.cs
-/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/CreateChild.g.cshtml.cs
-/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Parent1.g.cshtml.cs
-/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Parent2.g.cshtml.cs
+/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/NewCreature.g.cshtml.cs
+/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/obj/Debug/netcoreapp2.2/Razor/Views/Creatures/Learn.g.cshtml.cs

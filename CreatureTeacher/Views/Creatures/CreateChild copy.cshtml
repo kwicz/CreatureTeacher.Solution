@@ -1,0 +1,39 @@
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+@* @using CreatureTeacher.Models
+@using System.Collections.Generic
+@model CreatureTeacher.Models.Creature *@
+<h2>It's time to make a baby creature!</h2>
+<h3>Step 1: Pick the first parent for this new creature.</h3>
+@model List<CreatureTeacher.Models.Creature>
+@if (@Model.Count == 0)
+{
+  <p>Ruh Roh. You haven't built any creatures yet!</p>
+  @Html.ActionLink("Build a New Friend", "Create")
+} 
+@using (Html.BeginForm())
+{
+
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      Pick A Parent!
+      @foreach (Creature creature in @Model)
+      {
+        <a href='@Url.Action("SelectParent1","Creatures", new { parent1Id = creature.CreatureId})'>
+          <img src="../img/creatureImages/bodies/creature-test.png" width="100">
+        </a>
+      } 
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <div class="select-circle">
+        @Html.Partial("_Parent1")
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    Next
+  </button>
+
+}

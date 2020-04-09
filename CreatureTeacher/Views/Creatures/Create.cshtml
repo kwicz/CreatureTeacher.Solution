@@ -2,8 +2,12 @@
 	ViewData["Title"] = "Home Page";
 }
 
+@using CreatureTeacher.Models
+@using System.Collections.Generic
 @model CreatureTeacher.Models.Creature
 
+<h1>Make a New Friend!</h1>
+<h2>How many unique creatures can you create?</h2>
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
 		<div id="creature">
@@ -11,32 +15,205 @@
 		</div>
 	</div>
   @* <div class="mdl-cell mdl-cell--2-col"></div> *@
-  <div class="mdl-cell mdl-cell--6-col">
+  <div class="mdl-cell mdl-cell--6-col new-creature-form-wrapper">
 
-			<form action="/Creatures/Create" method="post">
+			<form action="/Creatures/Create" method="post" class="new-creature-form">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<label for="name" class="mdl-textfield__label">Creature Name</label>
 					<input id="name" name="name" type="text" class="mdl-textfield__input" required>
 				</div>
-				<div class="mdl-textfield mdl-js-textfield getmdl-select">
-					@Html.LabelFor(model => model.Eye)
-					@Html.DropDownList("EyeId", null, new { @class="mdl-textfield__input"})
+
+				<div class="eye-group">
+					<table class="mdl-data-table mdl-js-data-table">
+						<thead>
+							<tr>
+								<th class="mdl-data-table__cell--non-numeric">Eye Codons</th>
+								<th class="mdl-data-table__cell--non-numeric">T T ?  (Fancy)</th>
+								<th class="mdl-data-table__cell--non-numeric">T C ?  (Chill)</th>
+								<th class="mdl-data-table__cell--non-numeric">T A ? (Dizzy)</th>
+								<th class="mdl-data-table__cell--non-numeric">T G ? (Sleepy)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">T ? T (Black)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">T ? C (Red)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">T ? A (Green)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">T ? G (Purple)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="mdl-textfield mdl-js-textfield getmdl-select" id="eye-input">
+						@Html.LabelFor(model => model.Eye)
+						@Html.DropDownList("EyeId", null, new { @class="mdl-textfield__input"})
+					</div>
 				</div>
-				<div class="mdl-textfield mdl-js-textfield getmdl-select">
+
+					<table class="mdl-data-table mdl-js-data-table">
+						<thead>
+							<tr>
+								<th class="mdl-data-table__cell--non-numeric">Mouth Codons</th>
+								<th class="mdl-data-table__cell--non-numeric">A T ?  (Chill)</th>
+								<th class="mdl-data-table__cell--non-numeric">A C ?  (Teeth)</th>
+								<th class="mdl-data-table__cell--non-numeric">A A ? (Happy)</th>
+								<th class="mdl-data-table__cell--non-numeric">A G ? (Sad)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">A ? T (Black)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">A ? C (Navy)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>?
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">A ? A (Crimson)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">A ? G (Purple)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+						</tbody>
+					</table>
+
+				<div class="mdl-textfield mdl-js-textfield getmdl-select" id="">
 					@Html.LabelFor(model => model.Mouth)
 					@Html.DropDownList("MouthId", null, new { @class="mdl-textfield__input"})	
 				</div>
+
+					<table class="mdl-data-table mdl-js-data-table">
+						<thead>
+							<tr>
+								<th class="mdl-data-table__cell--non-numeric">Head Codons</th>
+								<th class="mdl-data-table__cell--non-numeric">C T ?  (Boy Toy)</th>
+								<th class="mdl-data-table__cell--non-numeric">C C ?  (Glam)</th>
+								<th class="mdl-data-table__cell--non-numeric">C A ? (Pigtails)</th>
+								<th class="mdl-data-table__cell--non-numeric">C G ? (Mohawk)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">C ? T (Black)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">C ? C (Yellow)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>?
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">C ? A (Green)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">C ? G (Red)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+						</tbody>
+					</table>
+
+
 				<div class="mdl-textfield mdl-js-textfield getmdl-select">
 					@Html.LabelFor(model => model.Head)
 					@Html.DropDownList("HeadId", null, new { @class="mdl-textfield__input"})
 				</div>
+
+					<table class="mdl-data-table mdl-js-data-table">
+						<thead>
+							<tr>
+								<th class="mdl-data-table__cell--non-numeric">Tail Codons</th>
+								<th class="mdl-data-table__cell--non-numeric">G T ?  (Squirrel)</th>
+								<th class="mdl-data-table__cell--non-numeric">G C ?  (Fox)</th>
+								<th class="mdl-data-table__cell--non-numeric">G A ? (Bulb)</th>
+								<th class="mdl-data-table__cell--non-numeric">G G ? (Fancy)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">G ? T (Pink)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">G ? C (Purple)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>?
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">A ? A (Crimson)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">A ? G (Purple)</td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+								<td class="mdl-data-table__cell--non-numeric"></td>
+							</tr>
+						</tbody>
+					</table>
 				<div class="mdl-textfield mdl-js-textfield getmdl-select">
 					@Html.LabelFor(model => model.Tail)
 					@Html.DropDownList("TailId", null, new { @class="mdl-textfield__input"})
 				</div>
 				<br>
-				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Make Me a Friend!</button>
-			</form>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Make A New Friend!</button>
+			</form> 	
 	</div>
 </div>
 

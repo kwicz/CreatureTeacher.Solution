@@ -5,18 +5,94 @@
 
 @using CreatureTeacher.Models
 @model CreatureTeacher.Models.Creature
+<h1>Look! It's @Html.DisplayFor(model => model.Name)!</h1>
+	<div class="row">
+    <div class="col-md-6">
+			<div class="details-card-square mdl-card mdl-shadow--2dp">
+				<div class="mdl-card__title mdl-card--expand">
+					<img src="../../img/creatureImages/bodies/body-blue.png" width="500" id="bodyImg">
+					<img src="../../img/creatureImages/mouths/@Url.Content(Model.Mouth.Image)" width="500" id="mouthImg">
+					<img src="../../img/creatureImages/eyes/@Url.Content(Model.Eye.Image)" width="500" id="eyesImg">
+					<img src="../../img/creatureImages/tails/@Url.Content(Model.Tail.Image)" width="500" id="tailImg">
+					<img src="../../img/creatureImages/hair/@Url.Content(Model.Head.Image)" width="500" id="headImg">
+					@{
+						Random random = new Random();
+						int result = random.Next(1, 8);
+						if (result == 1)
+						{
+							<img src="../../img/creatureImages/items/item-birthday.png" width="500" id="accessory">
+						}
+						if (result == 2)
+						{
+							<img src="../../img/creatureImages/items/item-camera.png" width="500" id="accessory">
+						}
+						if (result == 3)
+						{
+							<img src="../../img/creatureImages/items/item-crown.png" width="500" id="accessory">
+						}
+						if (result == 4)
+						{
+							<img src="../../img/creatureImages/items/item-drink.png" width="500" id="accessory">
+						}
+						if (result == 5)
+						{
+							<img src="../../img/creatureImages/items/item-viking.png" width="500" id="accessory">
+						}
+						if (result == 6)
+						{
+							<img src="../../img/creatureImages/items/item-watch.png" width="500" id="accessory">
+						}
+					}	
 
-<img src="../../img/creatureImages/bodies/body-blue.png" width="500" id="bodyImg">
-<img src="../../img/creatureImages/mouths/@Url.Content(Model.Mouth.Image)" width="500" id="mouthImg">
-<img src="../../img/creatureImages/eyes/@Url.Content(Model.Eye.Image)" width="500" id="eyesImg">
-<img src="../../img/creatureImages/tails/@Url.Content(Model.Tail.Image)" width="500" id="tailImg">
-<img src="../../img/creatureImages/hair/@Url.Content(Model.Head.Image)" width="500" id="headImg">
-
-@Html.DisplayFor(model => model.Name)'s Creature Features: 
-<ul>
-    <li>@Html.ActionLink($"{Model.Eye.Name}", "Details", "Eye", new { id = Model.MouthId })</li>
-    <li>@Html.ActionLink($"{Model.Mouth.Name}", "Details", "Mouth", new { id = Model.MouthId })</li>
-    <li>@Html.ActionLink($"{Model.Head.Name}", "Details", "Head", new { id = Model.HeadId })</li>
-    <li>@Html.ActionLink($"{Model.Tail.Name}", "Details", "Tail", new { id = Model.TailId })</li> 
-</ul>
-@Html.ActionLink("Back to List", "Index")<div class="mdc-card demo-card demo-ui-control">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="details-card-square mdl-card mdl-shadow--2dp">
+				<div class="mdl-card__title mdl-card--expand">
+				<ul id="detailList" >This Creature's Features:
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+								Eye Type: @Html.ActionLink($"{Model.Eye.Name}", "Details", "Eye", new { id = Model.EyeId })
+						</span>           
+					</li>
+					<li class="mdl-list__item">
+							<span class="mdl-list__item-primary-content">
+									Eye Codon: @Html.ActionLink($"{Model.Eye.Codon}", "Details", "Eye", new { id = Model.EyeId })
+							</span>           
+					</li>
+					<li class="mdl-list__item">
+							<span class="mdl-list__item-primary-content">
+									Mouth Type: @Html.ActionLink($"{Model.Mouth.Name}", "Details", "Mouth", new { id = Model.MouthId })
+							</span>           
+					</li>
+					<li class="mdl-list__item">
+							<span class="mdl-list__item-primary-content">
+									Mouth Codon: @Html.ActionLink($"{Model.Mouth.Codon}", "Details", "Mouth", new { id = Model.MouthId })
+							</span>           
+					</li>
+					<li class="mdl-list__item">
+							<span class="mdl-list__item-primary-content">
+									Head Type: @Html.ActionLink($"{Model.Head.Name}", "Details", "Head", new { id = Model.HeadId })
+							</span>           
+					</li>
+					<li class="mdl-list__item">
+							<span class="mdl-list__item-primary-content">
+									Head Codon: @Html.ActionLink($"{Model.Head.Codon}", "Details", "Head", new { id = Model.HeadId })
+							</span>           
+					</li>
+					<li class="mdl-list__item">
+							<span class="mdl-list__item-primary-content">
+									Tail Type: @Html.ActionLink($"{Model.Tail.Name}", "Details", "Tail", new { id = Model.TailId })
+							</span>           
+					</li>
+					<li class="mdl-list__item">
+							<span class="mdl-list__item-primary-content">
+									Tail Codon: @Html.ActionLink($"{Model.Tail.Codon}", "Details", "Tail", new { id = Model.TailId })
+							</span>           
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

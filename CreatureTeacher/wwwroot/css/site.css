@@ -5,6 +5,11 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
 
 
+.format-creature {
+  
+}
+
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -50,6 +55,7 @@ body {
   margin-bottom: 60px;
   text-align: center;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -78,27 +84,64 @@ h1, .mdl-layout-title{
   font-family: 'Bungee', cursive;
 }
 
+.details-card-square.mdl-card {
+  width: 500px;
+  height: 500px;
+}
+
 #bodyImg {
   position: absolute;
-  z-index: 1;
+  z-index: 100;
 }
 
 #mouthImg {
   position: absolute;
-  z-index: 2;
+  z-index: 150;
 }
 
 #eyesImg {
   position: absolute;
-  z-index: 3;
-}
-
-#headImg {
-  position: absolute;
-  z-index: 4;
+  z-index: 151;
 }
 
 #tailImg {
   position: absolute;
-  z-index: 5;
+  z-index: 80;
+}
+
+#headImg {
+  position: absolute;
+  z-index: 180;
+}
+
+#accessory {
+  position: absolute;
+  z-index: 200;
+}
+
+#detailView {
+  height:800px;
+  width: 800px;
+  text-align: center;
+}
+
+#detailList {
+  text-align: left;
+}
+
+.creatureImage {
+  text-align: center;
+}
+
+.new-creature-form-wrapper {
+  height: 400px;
+  overflow: scroll;
+}
+
+.new-creature-form {
+  padding: 20px;
+}
+
+.new-creature-form table {
+  width: 40px;
 }
