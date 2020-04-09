@@ -5,13 +5,14 @@
 @using CreatureTeacher.Models
 @model CreatureTeacher.Models.Creature
 
-<h1>Look! It's @Html.DisplayFor(model => model.Name)!</h1>
+<h1>Congratulations on your new baby!!</h1>
+
 	<div class="row">
     <div class="col-md-6">
 			<div class="details-card-square mdl-card mdl-shadow--2dp">
 				<div class="mdl-card__title mdl-card--expand">
 					<img src="../../img/creatureImages/bodies/body-blue.png" width="500" id="bodyImg">
-					<img src="../../img/creatureImages/mouths/@Url.Content(Model.Mouth.Image)" width="500" id="mouthImg">
+					<img src="../../img/creatureImages/mouths/@Url.Content(Model.Mouth.Name)" width="500" id="mouthImg">
 					<img src="../../img/creatureImages/eyes/@Url.Content(Model.Eye.Image)" width="500" id="eyesImg">
 					<img src="../../img/creatureImages/tails/@Url.Content(Model.Tail.Image)" width="500" id="tailImg">
 					<img src="../../img/creatureImages/hair/@Url.Content(Model.Head.Image)" width="500" id="headImg">
@@ -50,6 +51,21 @@
 		<div class="col-md-6">
 			<div class="details-card-square mdl-card mdl-shadow--2dp">
 				<div class="mdl-card__title mdl-card--expand">
+          <p>What do you want to name this little squirt?</p>
+          @using (Html.BeginForm())
+          {
+            @Html.HiddenFor(model => model.CreatureId)
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label for="name" class="mdl-textfield__label">Creature Name</label>
+              <input id="name" name="name" type="text" class="mdl-textfield__input" required>
+            </div>
+
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Make A New Friend!</button>
+          }
+
+
+
 				<ul id="detailList" >This Creature's Features:
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">

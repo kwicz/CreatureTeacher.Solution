@@ -5,9 +5,14 @@
   string headImagePath = Url.Content("../img/creatureImages/hair/" + @ViewBag.Parent2Head);
   string tailImagePath = Url.Content("../img/creatureImages/tails/" + @ViewBag.Parent2Tail);
 }
-<div class="format-creature">
-  <img src="@bodyImagePath" width="500" id="bodyImg">
-  <img src="@eyeImagePath" width="500" id="eyeImg">
-  <img src="@mouthImagePath" width="500" id="mouthImg">
-  <img src="@tailImagePath" width="500" id="tailImg">
+
+<div class="details-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand">
+    <h3 class="card-title">Parent 2!</h3>
+    <img src="@eyeImagePath" width="500" id="eyesImg">
+    <img src="@bodyImagePath" width="500" id="bodyImg">
+    <img src="@mouthImagePath" width="500" id="mouthImg">
+    <img src="@tailImagePath" width="500" id="tailImg">
+    <img src="@headImagePath" width="500" id="headImg">
+  </div>
 </div>

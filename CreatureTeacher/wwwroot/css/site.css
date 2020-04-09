@@ -5,11 +5,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 
-.format-creature {
-  
-}
-
-
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -136,20 +131,8 @@ h1, .mdl-layout-title{
 }
 
 .new-creature-form-wrapper {
-  height: 400px;
-  overflow: scroll;
-}
-
-.new-creature-form {
-  padding: 20px;
-}
-
-.new-creature-form table {
-  width: 40px;
-}
-
-.get-started {
-  padding: 20px;
+  /* height: 400px;
+  overflow: scroll; */
 }
 
 .splash {
@@ -160,10 +143,13 @@ h1, .mdl-layout-title{
   margin-top: -75px;
   margin-bottom: -250px;
 }
+
 .logo a {
   color: #F26868;
 }
 
-.mdl-layout-drawer {
-  color: #F26868;
+div.sticky {
+  /* position: -webkit-sticky; Safari */
+  position: sticky;
+  top: 0;
 }

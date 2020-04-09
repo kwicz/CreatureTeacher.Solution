@@ -23,7 +23,7 @@
     @foreach (Creature creature in @Model)
     {
       <a href='@Url.Action("SelectParent1","Creatures", new { parent1Id = creature.CreatureId})'>
-        <img src="../img/creatureImages/bodies/creature-test.png" width="100">
+        <img src="../img/just-jeremy.png" width="100">
       </a>
     }
 
@@ -34,27 +34,25 @@
     @foreach (Creature creature in @Model)
     {
       <a href='@Url.Action("SelectParent2","Creatures", new { parent2Id = creature.CreatureId})'>
-        <img src="../img/creatureImages/bodies/creature-test.png" width="100">
+        <img src="../img/just-matt.png" width="100">
       </a>
     }
   </div>
 </div>
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    Parent 1!
     <div class="select-circle">
     @Html.Partial("_Parent1")
     </div>
   </div>
   <div class="mdl-cell mdl-cell--6-col">
-    Parent 2!
     <div class="select-circle">
     @Html.Partial("_Parent2")
     </div>
   </div>
 </div>
 
-<a href='@Url.Action("Details","Creatures", new { id = @ViewBag.NewBabyId})'>
+<a href='@Url.Action("Details","Creatures", new { id = @ViewBag.babyExistsId})'>
   <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
     Breed those Bad Mamma Jammas
   </button>

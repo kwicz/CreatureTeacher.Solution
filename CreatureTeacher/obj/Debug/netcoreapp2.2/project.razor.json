@@ -2971,6 +2971,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/Views/Creatures/Edit.cshtml",
+      "TargetPath": "Views\\Creatures\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -2978,11 +2983,6 @@
     {
       "FilePath": "/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/Views/Creatures/Learn.cshtml",
       "TargetPath": "Views\\Creatures\\Learn.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/katysolovewicz/Desktop/CreatureTeacher.Solution/CreatureTeacher/Views/Creatures/CreateChild copy.cshtml",
-      "TargetPath": "Views\\Creatures\\CreateChild copy.cshtml",
       "FileKind": "mvc"
     },
     {
