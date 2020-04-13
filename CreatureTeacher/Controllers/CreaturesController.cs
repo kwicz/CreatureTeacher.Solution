@@ -302,20 +302,6 @@ namespace CreatureTeacher.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
-    public ActionResult Edit(int id)
-    {
-      var thisCreature = _db.Creatures.FirstOrDefault(creature => creature.CreatureId == id);
-      return View(thisCreature);
-    }
-
-    [HttpPost]
-    public ActionResult Edit(Creature creature)
-    {
-      _db.Entry(creature).State = EntityState.Modified;
-      _db.SaveChanges();
-      return RedirectToAction("Index");
-    }
   }
 }
 // 

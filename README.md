@@ -2,23 +2,22 @@
 
 #### By _**Jeremy Kale Padot, Steph Podolak, Matt Taylor, & Katy Wicz**_
 
-![Header](CreatureTeacher/wwwroot/img/splash.png)
+![Splash Page](CreatureTeacher/wwwroot/img/projectWalkthrough/preview.png)
 
 ## Description
 
 _An ASP.NET Core MVC web application designed to teach young users about DNA and Codons by creating creatures and mixing their DNA._
 
 ## Application Usage
-| Specification | Example Input | Example Output |
-| ------------- |:-------------:| -------------------:|
-| User can learn more about DNA and Codens at the Get Started Page | User opens 'Get Started' tab | DNA and Coden information is displayed |
-| User can create a creature by selecting codons which are assigned to creature features | User selects Eye TTT, Mouth ATT, Head CTT, Tail GTT  | Selected Codens and Features are Assigned to your creature build |
-| User can view catalog of created creatures | User clicks 'Creature Collection'  | Catalog of Creatures are displayed |
-| User can select creature from catalog to view Coden and feature information | User Selects Creature | Creature image and Coden / Features are displayed |
-| User can create multiple creatures for breeding | User creates another creature | More creatures are added to the catalog |
-| User can select two parents they wish to breed | User selects Creature 1 and Creature 2 | Creature 1 and Creature 2 are displayed and ready to pass DNA |
-| User can breed two creatures creating a baby based on passing of dna and codens  | User Clicks 'Breed Those Bad Mamma Jammas' | A new baby creature is created and displayed containing features and codens owned by the parents |
-| Baby creature is now added to the creature catalog | User clicks 'Creature Collection'  | New baby creature is displayed with parent creatures |
+| Page Preview | Specification | Example Input | Example Output |
+|:---:|:---:|:---:| :---:|
+|![Get Started](CreatureTeacher/wwwroot/img/projectWalkthrough/learn1.png) ![Get Started](CreatureTeacher/wwwroot/img/projectWalkthrough/learn2.png)| User can learn more about DNA and codons at the 'Get Started' Page | User clicks 'Get Started' link | DNA and codon tutorial is displayed |
+|![Creature Creation](CreatureTeacher/wwwroot/img/projectWalkthrough/buildCreature.png)| User can create a creature by selecting codons which are assigned to creature features | User selects Eye TTT, Mouth ATT, Head CTT, Tail GTT  | Selected Codens and Features are Assigned to your creature build |
+|![Creature Collection](CreatureTeacher/wwwroot/img/projectWalkthrough/preview.png)| User can view catalog of created creatures | User clicks 'Creature Collection'  | Catalog of creatures is displayed |
+|![Details](CreatureTeacher/wwwroot/img/projectWalkthrough/details.png)| User can select creature from catalog to view codon and feature details | User selects creature | Creature image and codon / Features are displayed |
+|![Create Baby Creature](CreatureTeacher/wwwroot/img/projectWalkthrough/parentCreatures.png)| User can select two parent creatures from creatures that have already been created| User selects Creature 1 and Creature 2 | Creature 1 and Creature 2 are displayed and ready to pass DNA |
+|![Baby Creature](CreatureTeacher/wwwroot/img/projectWalkthrough/newCreature.png)| Computer generates a new baby creature by based off of the recessive and dominant genes of the user-chosen parent creatures | User Clicks 'Breed Those Bad Mamma Jammas' | A new baby creature is created and displayed containing features and codons inherited from the parent cratures |
+|![In Collection](CreatureTeacher/wwwroot/img/projectWalkthrough/born.png)| Baby creature is now added to the creature catalog | User clicks 'Creature Collection'  | New baby creature is displayed the rest of the creatures |
 
 
 ## Setup/Installation Requirements
