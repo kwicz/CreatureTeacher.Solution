@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
+#nullable disable
+
 namespace CreatureTeacher.Migrations
 {
     [DbContext(typeof(CreatureTeacherContext))]
@@ -14,29 +16,38 @@ namespace CreatureTeacher.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("CreatureTeacher.Models.Creature", b =>
                 {
                     b.Property<int>("CreatureId")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("BirthDate");
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<int>("EyeId");
+                    b.Property<int>("EyeId")
+                        .HasColumnType("int");
 
-                    b.Property<int>("HeadId");
+                    b.Property<int>("HeadId")
+                        .HasColumnType("int");
 
-                    b.Property<int>("MouthId");
+                    b.Property<int>("MouthId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
 
-                    b.Property<int>("Parent1Id");
+                    b.Property<int>("Parent1Id")
+                        .HasColumnType("int");
 
-                    b.Property<int>("Parent2Id");
+                    b.Property<int>("Parent2Id")
+                        .HasColumnType("int");
 
-                    b.Property<int>("TailId");
+                    b.Property<int>("TailId")
+                        .HasColumnType("int");
 
                     b.HasKey("CreatureId");
 
@@ -54,15 +65,20 @@ namespace CreatureTeacher.Migrations
             modelBuilder.Entity("CreatureTeacher.Models.Eye", b =>
                 {
                     b.Property<int>("EyeId")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<string>("Codon");
+                    b.Property<string>("Codon")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Dominance");
+                    b.Property<string>("Dominance")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Image");
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
 
                     b.HasKey("EyeId");
 
@@ -72,15 +88,20 @@ namespace CreatureTeacher.Migrations
             modelBuilder.Entity("CreatureTeacher.Models.Head", b =>
                 {
                     b.Property<int>("HeadId")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<string>("Codon");
+                    b.Property<string>("Codon")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Dominance");
+                    b.Property<string>("Dominance")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Image");
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
 
                     b.HasKey("HeadId");
 
@@ -90,15 +111,20 @@ namespace CreatureTeacher.Migrations
             modelBuilder.Entity("CreatureTeacher.Models.Mouth", b =>
                 {
                     b.Property<int>("MouthId")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<string>("Codon");
+                    b.Property<string>("Codon")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Dominance");
+                    b.Property<string>("Dominance")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Image");
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
 
                     b.HasKey("MouthId");
 
@@ -108,15 +134,20 @@ namespace CreatureTeacher.Migrations
             modelBuilder.Entity("CreatureTeacher.Models.Tail", b =>
                 {
                     b.Property<int>("TailId")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<string>("Codon");
+                    b.Property<string>("Codon")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Dominance");
+                    b.Property<string>("Dominance")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Image");
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
 
                     b.HasKey("TailId");
 
@@ -128,22 +159,54 @@ namespace CreatureTeacher.Migrations
                     b.HasOne("CreatureTeacher.Models.Eye", "Eye")
                         .WithMany("Creatures")
                         .HasForeignKey("EyeId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("CreatureTeacher.Models.Head", "Head")
                         .WithMany("Creatures")
                         .HasForeignKey("HeadId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("CreatureTeacher.Models.Mouth", "Mouth")
                         .WithMany("Creatures")
                         .HasForeignKey("MouthId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("CreatureTeacher.Models.Tail", "Tail")
                         .WithMany("Creatures")
                         .HasForeignKey("TailId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Eye");
+
+                    b.Navigation("Head");
+
+                    b.Navigation("Mouth");
+
+                    b.Navigation("Tail");
+                });
+
+            modelBuilder.Entity("CreatureTeacher.Models.Eye", b =>
+                {
+                    b.Navigation("Creatures");
+                });
+
+            modelBuilder.Entity("CreatureTeacher.Models.Head", b =>
+                {
+                    b.Navigation("Creatures");
+                });
+
+            modelBuilder.Entity("CreatureTeacher.Models.Mouth", b =>
+                {
+                    b.Navigation("Creatures");
+                });
+
+            modelBuilder.Entity("CreatureTeacher.Models.Tail", b =>
+                {
+                    b.Navigation("Creatures");
                 });
 #pragma warning restore 612, 618
         }

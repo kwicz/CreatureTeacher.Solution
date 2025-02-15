@@ -1,0 +1,155 @@
+﻿
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Paaji+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  text-align: center;
+  /* font-family: 'Baloo Paaji 2', cursive; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+#creature {
+  text-align: center;
+}
+
+/* <!-- Square card --> */
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('../img/creatureImages/bodies/creature-test.png') bottom right 15% no-repeat #F26868;
+}
+h1, .mdl-layout-title{
+  font-family: 'Bungee', cursive;
+}
+
+.details-card-square.mdl-card {
+  width: 500px;
+  height: 500px;
+}
+
+#bodyImg {
+  position: absolute;
+  z-index: 100;
+}
+
+#mouthImg {
+  position: absolute;
+  z-index: 150;
+}
+
+#eyesImg {
+  position: absolute;
+  z-index: 151;
+}
+
+#tailImg {
+  position: absolute;
+  z-index: 80;
+}
+
+#headImg {
+  position: absolute;
+  z-index: 180;
+}
+
+#accessory {
+  position: absolute;
+  z-index: 200;
+}
+
+#detailView {
+  height:800px;
+  width: 800px;
+  text-align: center;
+}
+
+#detailList {
+  text-align: left;
+}
+
+.creatureImage {
+  text-align: center;
+}
+
+.new-creature-form-wrapper {
+  /* height: 400px;
+  overflow: scroll; */
+}
+
+.splash {
+  margin-top: 0px;
+}
+
+.splashTop {
+  margin-top: -75px;
+  margin-bottom: -250px;
+}
+
+.logo a {
+  color: #F26868;
+}
+
+div.sticky {
+  /* position: -webkit-sticky; Safari */
+  position: sticky;
+  top: 0;
+}
