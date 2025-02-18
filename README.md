@@ -90,59 +90,6 @@ http://127.0.0.1:5000
 8. Repeat steps 3-7 for the mouth, head, and tails tables.
 9. Congratulations! You have filled the features tables in the `creature_teacher` database that you can now query.
 
-## Deployment Instructions
-
-### Initialize Docker
-
-1. If you don't have it already, install [Docker](https://www.docker.com/get-started/)
-2. Make sure Docker is running
-
-### Build and Run Your Docker Container Locally
-
-1. Build the Docker image
-
-```sh
-docker build -t my-aspnet-app .
-```
-
-2. Run the container
-
-```sh
-docker run -p 8080:8080 my-aspnet-app
-```
-
-3.  Test the app in your browser: Go to http://localhost:8080 and check if it works!
-
-### Deploy Your Dockerized App
-
-1. Install Fly.io CLI (if not installed)
-
-```sh
-curl -L https://fly.io/install.sh | sh
-```
-
-2. Log in to Fly.io:
-
-```sh
-fly auth signup
-```
-
-3. Initialize the Fly app
-
-```sh
-fly launch
-```
-
-- Choose "Deploy an existing Dockerfile"
-
-4. Deploy your app:
-
-```sh
-fly deploy
-```
-
-5. Check your new URL and see Creature Teacher in action!
-
 ## Known Bugs
 
 _No known bugs at this time._
@@ -161,8 +108,6 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 - _EF Core 8.0.0_
 - _Razor 8.0.0_
 - _Affinity Designer_
-- _Docker_
-- _Deployed with Fly.io_
 - _[DNA Lessons from Khan Academy](https://www.khanacademy.org/science/biology/gene-expression-central-dogma/central-dogma-transcription/a/the-genetic-code-discovery-and-properties)_
 
 ## License
