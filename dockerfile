@@ -3,6 +3,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 8080
 
+
 # Step 2: Use the .NET SDK image for building the app
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
