@@ -30,7 +30,14 @@ namespace CreatureTeacher
             services.AddDbContext<CreatureTeacherContext>(options =>
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection"),
-                    ServerVersion.Parse("8.0.0"))
+                    ServerVersion.Parse("8.0.0"),
+                    mySqlOptions => mySqlOptions
+                        .EnableRetryOnFailure(
+                            maxRetryCount: 10,
+                            maxRetryDelay: TimeSpan.FromSeconds(30),
+                            errorNumbersToAdd: null
+                        )
+                )
             );
 
             services.Configure<CookiePolicyOptions>(options =>
