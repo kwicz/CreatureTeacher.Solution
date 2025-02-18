@@ -1,0 +1,18 @@
+[
+phases.setup
+]
+nixPkgs = ['dotnet-sdk_8']
+
+[
+phases.build
+]
+cmds = [
+  'cd CreatureTeacher',
+  'dotnet restore',
+  'dotnet publish -c Release -o out'
+]
+
+[
+start
+]
+cmd = 'cd CreatureTeacher && dotnet ./out/CreatureTeacher.dll'
