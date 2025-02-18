@@ -90,6 +90,29 @@ http://127.0.0.1:5000
 8. Repeat steps 3-7 for the mouth, head, and tails tables.
 9. Congratulations! You have filled the features tables in the `creature_teacher` database that you can now query.
 
+## Deployment Instructions
+
+### Initialize Docker
+
+1. If you don't have it already, install [Docker](https://www.docker.com/get-started/)
+2. Make sure Docker is running
+
+### Build and Run Your Docker Container Locally
+
+1. Build the Docker image
+
+```sh
+docker build -t my-aspnet-app .
+```
+
+2. Run the container
+
+```sh
+docker run -p 8080:8080 my-aspnet-app
+```
+
+3.  Test the app in your browser: Go to http://localhost:8080 and check if it works!
+
 ## Known Bugs
 
 _No known bugs at this time._
@@ -108,6 +131,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 - _EF Core 8.0.0_
 - _Razor 8.0.0_
 - _Affinity Designer_
+- _Docker_
 - _[DNA Lessons from Khan Academy](https://www.khanacademy.org/science/biology/gene-expression-central-dogma/central-dogma-transcription/a/the-genetic-code-discovery-and-properties)_
 
 ## License

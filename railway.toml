@@ -1,7 +1,0 @@
-[build]
-builder = "nixpacks"
-buildCommand = "dotnet restore CreatureTeacher.Solution.sln && dotnet build CreatureTeacher.Solution.sln"
-
-[deploy]
-startCommand = "cd CreatureTeacher && dotnet run"
-restartPolicyType = "ON_FAILURE"

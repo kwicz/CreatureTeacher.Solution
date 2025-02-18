@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  creature-teacher-db:
+    image: mysql:8
+    container_name: creature-teacher-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: epicodus
+      MYSQL_DATABASE: creature_db
+    ports:
+      - '3307:3306'
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'mysqladmin',
+          'ping',
+          '-h',
+          'localhost',
+          '-u',
+          'root',
+          '-pepicodus',
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  creature-teacher-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: creature-teacher-app
+    depends_on:
+      creature-teacher-db:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - '8080:8080'
+
+volumes:
+  db_data:
