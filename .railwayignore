@@ -1,5 +1,2 @@
 README.md
-*.git*
-*.docker*
-docker-compose.yml
-Dockerfile
+*.git
